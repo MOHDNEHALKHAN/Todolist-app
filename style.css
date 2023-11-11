@@ -1,4 +1,4 @@
-body {
+body.str {
   width: auto;
   height: 926px;
   margin: 0;
@@ -62,19 +62,70 @@ body {
   align-items: center;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 /* Homepage css */
+body.hp {
+  width: auto;
+  height: 926px;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+}
+#navigation{
+  width: auto;
+  height: 85px;
+  background: #FAEA58;
+}
+
+.hp-btn{
+  height: 85px;
+  border-radius: 30px 30px 0px 0px;
+  background: #FAEA58;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.hp-head{
+  color: #FAEA58;
+ font-family: Berlin Sans FB;
+ font-size: 26px;
+ font-style: normal; 
+font-weight: 400;
+line-height: normal;
+text-align: center;
+}
+
+#hamburger{
+padding: 30px 0px 0px 20px;
+}
+
+.bar {
+  width: 35px;
+  height: 4px;
+  border-radius: 10px;
+  background: #6CB9E5;
+  margin-bottom: 4px; 
+}
+
+.hp-mid{
+ position: relative;
+ top: 145px;
+}
+
+.save-icon{
+  padding-left: 23px;
+    padding-top: 23px;
+}
+
+.taskadd-icon{
+  padding-top: 23px;
+}
+
+.delete-icon{
+  padding-top: 23px;
+}
+
 /* Taskpage css */
 /* Savetask-page css */
 /* Savehistory-page css */
