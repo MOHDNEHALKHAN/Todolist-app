@@ -9,7 +9,7 @@ body.str {
 
 .str-head {
   color: #514545;
-  font-family: Berlin Sans FB;
+  font-family: "Berlin Sans FB", Arial, sans-serif;
   font-size: 60px;
   font-style: normal;
   font-weight: 400;
@@ -27,8 +27,16 @@ body.str {
   align-items: center;
 }
 
-.str-img {
+.strimg-div {
   width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.str-img {
+  height: 217px;
+  width: 300px;
 }
 
 .bot-btn {
@@ -37,7 +45,7 @@ body.str {
   border-radius: 30px;
   background: #6cb9e5;
   color: #fff;
-  font-family: Berlin Sans FB;
+  font-family: "Berlin Sans FB", Arial, sans-serif;
   font-size: 37px;
   font-style: normal;
   font-weight: 400;
@@ -48,7 +56,7 @@ body.str {
   align-items: center;
 }
 
-.bot-btn:hover{
+.bot-btn:hover {
   box-shadow: 10px 10px 0px #000;
 }
 
@@ -70,59 +78,75 @@ body.hp {
   padding: 0;
   background-color: #ffffff;
 }
-#navigation{
+#navigation {
   width: auto;
   height: 85px;
-  background: #FAEA58;
+  background: #faea58;
 }
 
-.hp-btn{
+.hp-btn {
   height: 85px;
   border-radius: 30px 30px 0px 0px;
-  background: #FAEA58;
+  background: #faea58;
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-bottom: 10px;
 }
 
-.hp-head{
-  color: #FAEA58;
- font-family: Berlin Sans FB;
- font-size: 26px;
- font-style: normal; 
-font-weight: 400;
-line-height: normal;
-text-align: center;
+.hp-head {
+  color: #faea58;
+  font-family: "Berlin Sans FB", Arial, sans-serif;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
 }
 
-#hamburger{
-padding: 30px 0px 0px 20px;
+#hamburger {
+  padding: 30px 0px 0px 20px;
 }
 
 .bar {
   width: 35px;
   height: 4px;
   border-radius: 10px;
-  background: #6CB9E5;
-  margin-bottom: 4px; 
+  background: #6cb9e5;
+  margin-bottom: 4px;
 }
 
-.hp-mid{
- position: relative;
- top: 145px;
+.hp-mid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 100px 0 0 0;
 }
 
-.save-icon{
-  padding-left: 23px;
-    padding-top: 23px;
+.hp-img {
+  width: 295px;
+  height: 267px;
 }
 
-.taskadd-icon{
+.save-icon {
+  height: 48px;
+  width: 34px;
   padding-top: 23px;
 }
 
-.delete-icon{
+.taskadd-icon {
+  height: 50px;
+  width: 50px;
+  padding-top: 23px;
+}
+
+.delete-icon {
+  height: 50px;
+  width: 45px;
   padding-top: 23px;
 }
 
