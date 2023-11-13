@@ -1,6 +1,6 @@
 body.str {
   width: auto;
-  height: 926px;
+  height: auto;
   margin: 0;
   padding: 0;
   background-color: #6cb9e5;
@@ -19,7 +19,7 @@ body.str {
 }
 .top-des {
   width: auto;
-  height: 360px;
+  height: 250px;
   border-radius: 0px 0px 202px 0px;
   background: #faea58;
   display: flex;
@@ -51,7 +51,6 @@ body.str {
   font-weight: 400;
   line-height: normal;
   display: flex;
-  text-align: center;
   justify-content: center;
   align-items: center;
 }
@@ -61,19 +60,21 @@ body.str {
 }
 
 .bot-des {
-  width: auto;
-  height: 360px;
+  width: 100%;
+  height: 250px;
   border-radius: 214px 0px 0px 0px;
   background: #faea58;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: fixed;
+  bottom: 0;
 }
 
 /* Homepage css */
 body.hp {
   width: auto;
-  height: 926px;
+  height: auto;
   margin: 0;
   padding: 0;
   background-color: #ffffff;
@@ -151,6 +152,13 @@ body.hp {
 }
 
 /* Taskpage css */
+body.tp {
+  width: auto;
+  height: 926px;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+}
 /* Savetask-page css */
 /* Savehistory-page css */
 /* Historypage css */
