@@ -5,6 +5,18 @@ body.str {
   padding: 0;
   background-color: #6cb9e5;
 }
+/* Common code for all pages */
+
+#navigation {
+  width: auto;
+  height: 85px;
+  background: #faea58;
+}
+
+#hamburger {
+  padding: 30px 0px 0px 20px;
+}
+
 /* Startpage css */
 
 .str-head {
@@ -79,11 +91,6 @@ body.hp {
   padding: 0;
   background-color: #ffffff;
 }
-#navigation {
-  width: auto;
-  height: 85px;
-  background: #faea58;
-}
 
 .hp-btn {
   height: 85px;
@@ -107,10 +114,6 @@ body.hp {
   font-weight: 400;
   line-height: normal;
   text-align: center;
-}
-
-#hamburger {
-  padding: 30px 0px 0px 20px;
 }
 
 .bar {
@@ -154,11 +157,12 @@ body.hp {
 /* Taskpage css */
 body.tp {
   width: auto;
-  height: 926px;
+  height: auto;
   margin: 0;
   padding: 0;
   background-color: #ffffff;
 }
+
 /* Savetask-page css */
 /* Savehistory-page css */
 /* Historypage css */
