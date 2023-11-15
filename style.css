@@ -21,7 +21,7 @@ body.str {
 
 .str-head {
   color: #514545;
-  font-family: 'Kanit', sans-serif;
+  font-family: "Kanit", sans-serif;
   font-size: 60px;
   font-style: normal;
   font-weight: 400;
@@ -57,7 +57,7 @@ body.str {
   border-radius: 30px;
   background: #6cb9e5;
   color: #fff;
-  font-family: 'Kanit', sans-serif;
+  font-family: "Kanit", sans-serif;
   font-size: 37px;
   font-style: normal;
   font-weight: 400;
@@ -108,7 +108,7 @@ body.hp {
 
 .hp-head {
   color: #faea58;
-  font-family: 'Kanit', sans-serif;
+  font-family: "Kanit", sans-serif;
   font-size: 26px;
   font-style: normal;
   font-weight: 400;
@@ -163,13 +163,50 @@ body.tp {
   background-color: #ffffff;
 }
 
-.ts-add{
+.ts-add {
   height: 280px;
   border-radius: 30px 30px 0px 0px;
-  background: #6CB9E5;
+  background: #6cb9e5;
   position: fixed;
   bottom: 0;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#add-ts {
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding: 20px 0px 0px 30px;
+}
+
+#ts-text {
+  font-family: "Roboto", sans-serif;
+  border-radius: 9px;
+  border: 1px solid #737373;
+  background: #6cb9e5;
+  width: auto;
+  height: 40px;
+  margin: 0px 30px 0px 30px;
+}
+
+#ts-text:focus {
+  outline: none;
+  font-size: 16px;
+}
+
+#add-ds {
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding-left: 30px;
 }
 
 /* Savetask-page css */
