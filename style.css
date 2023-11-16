@@ -54,6 +54,7 @@ body.str {
 .bot-btn {
   width: 200px;
   height: 60px;
+  border: none;
   border-radius: 30px;
   background: #6cb9e5;
   color: #fff;
@@ -235,8 +236,16 @@ body.tp {
 }
 
 
-
 /* Savetask-page css */
+.st{
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  background-color: #6CB9E5;
+}
+
+
 /* Savehistory-page css */
 /* Historypage css */
 /* Deletehistory-page css */
