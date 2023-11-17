@@ -246,6 +246,52 @@ body.tp {
 }
 
 
-/* Savehistory-page css */
-/* Historypage css */
 /* Deletehistory-page css */
+
+.dh{
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  /* background-color: #6CB9E5; */
+}
+
+.hp-footer{
+  height: 85px;
+  border-radius: 30px 30px 0px 0px;
+  background: #faea58;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  /* display: flex;
+  flex-direction: row; */
+  padding-bottom: 10px;
+}
+
+#dh-para{
+  color: #000;
+  font-family: "Roboto", sans-serif;
+font-size: 19px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.ch-div{
+  display: flex;
+    flex-direction: row-reverse;
+    gap: 13px;
+    margin: 20px 20px 0px 0px;
+    text-align: center;
+    align-items: center;
+}
+
+.dh-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 150px;
+}
