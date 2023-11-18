@@ -8,18 +8,20 @@
     <link rel="shortcut icon" href="/Assests/favicon.png" type="image/x-icon" />
 </head>
 <body class="st">
-    <nav id="navigation">
-        <div id="hamburger">
-          <div id="bar1" class="bar"></div>
-          <div id="bar2" class="bar"></div>
-          <div id="bar3" class="bar"></div>
-        </div>
-        <!-- <ul>
-      <li><a href="#">Saved task</a></li>
-      <li><a href="#">Deleted task</a></li>
-      <li><a href="#">History task</a></li>
-  </ul> -->
-  </nav> 
+  <nav id="navigation">
+    <div id="hamburger" onclick ="onClickHamburger()">
+      <div id="bar1" class="bar"></div>
+      <div id="bar2" class="bar"></div>
+      <div id="bar3" class="bar"></div>
+    </div>
+    <ul class="nav" id="nav">
+       <h4>To-do It</h4>
+       <li><a href="Homepage.html">Home Page</a></li>
+       <li><a href="Savetask-page.html">Saved task</a></li>
+       <li><a href="DeleteHistory-page.html">Deleted task</a></li>
+    </ul>
+  </nav>
   <div id="taskContainer"></div>
+  <script src="script.js"></script>
 </body>
 </html>
