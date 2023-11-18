@@ -14,7 +14,105 @@ body.str {
 }
 
 #hamburger {
+  width: 35px;
+  height: 30px;
   padding: 30px 0px 0px 20px;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.bar {
+  display: block;
+  width: 100%;
+  height: 5px;
+  border-radius: 10px;
+  background: #6cb9e5;
+  transition: 0.3s ease;
+}
+
+#bar1 {
+  transform: translateY(-4px);
+}
+
+#bar3 {
+  transform: translateY(4px);
+}
+
+.nav {
+  padding: 0;
+  margin: 0px 20px 0px 0px;
+  transition: 1s ease;
+  display: none;
+}
+
+.nav li a {
+  text-decoration: none;
+}
+.nav li a:active{
+  color:#636363; ;
+}
+.nav li {
+  list-style: none;
+  padding: 16px 0 0 32px;
+}
+
+.cross-icon .bar {
+  background-color: #6cb9e5;
+}
+
+.cross-icon #bar1 {
+  transform: translateY(4px) rotate(-45deg);
+}
+
+.cross-icon #bar2 {
+  opacity: 0;
+}
+
+.cross-icon #bar3 {
+  transform: translateY(-6px) rotate(45deg);
+}
+
+.change-ham {
+  background-color: #faea58;
+  height: 100vh;
+  position: absolute;
+  margin: 0;
+  color: #636363;
+  font-family: Berlin Sans FB;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  top: 0;
+  z-index: -100;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 1000px) {
+  .change-ham {
+    width: 40%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .change-ham {
+    width: 100%;
+  }
+}
+
+h4{
+  color: #514545;
+font-family: Berlin Sans FB;
+font-size: 32px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+position: fixed;
+top: 120px;
+left: 32px;
 }
 
 /* Startpage css */
@@ -117,14 +215,6 @@ body.hp {
   text-align: center;
 }
 
-.bar {
-  width: 35px;
-  height: 4px;
-  border-radius: 10px;
-  background: #6cb9e5;
-  margin-bottom: 4px;
-}
-
 .hp-mid {
   display: flex;
   flex-direction: column;
@@ -211,7 +301,7 @@ body.tp {
   line-height: normal;
   padding-left: 30px;
 }
-#ts-des{
+#ts-des {
   font-size: 17px;
   font-family: "Roboto", sans-serif;
   border-radius: 9px;
@@ -229,34 +319,32 @@ body.tp {
   font-size: 17px;
 }
 
-#submit-btn{
+#submit-btn {
   display: flex;
   flex-direction: row-reverse;
   margin: 15px 30px 0px 0px;
 }
 
-
 /* Savetask-page css */
-.st{
+.st {
   width: auto;
   height: auto;
   margin: 0;
   padding: 0;
-  background-color: #6CB9E5;
+  background-color: #6cb9e5;
 }
-
 
 /* Deletehistory-page css */
 
-.dh{
+.dh {
   width: auto;
   height: auto;
   margin: 0;
   padding: 0;
-  background-color: #6CB9E5;
+  background-color: #6cb9e5;
 }
 
-.hp-footer{
+.hp-footer {
   height: 85px;
   border-radius: 30px 30px 0px 0px;
   background: #faea58;
@@ -267,33 +355,33 @@ body.tp {
   padding-bottom: 10px;
 }
 
-#dh-para{
+#dh-para {
   color: #000;
   font-family: "Roboto", sans-serif;
-font-size: 19px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
-.ch-div{
+.ch-div {
   display: flex;
-    flex-direction: row-reverse;
-    gap: 13px;
-    margin: 20px 20px 0px 0px;
-    text-align: center;
-    align-items: center;
+  flex-direction: row-reverse;
+  gap: 13px;
+  margin: 20px 20px 0px 0px;
+  text-align: center;
+  align-items: center;
 }
 
-.dh-div{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    top: 150px;
+.dh-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 150px;
 }
 
-#new-div{
+#new-div {
   display: none;
 }
