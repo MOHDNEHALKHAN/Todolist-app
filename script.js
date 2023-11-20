@@ -7,29 +7,46 @@ botBtn.addEventListener("click", function () {
 
 // hamburger icon working
 
-function onClickHamburger(){
-document.getElementById("hamburger").classList.toggle("cross-icon");
-document.getElementById("nav").classList.toggle("change-ham");
-const hamBurger = document.getElementById("hamburger");
-const navBar = document.getElementById("navigation");
-const hpImg = document.querySelector(".hp-mid");
-const hpFooter = document.querySelector(".hp-btn");
-const dhFooter = document.querySelector(".dh-footer")                     
+function onClickHamburger() {
+  document.getElementById("hamburger").classList.toggle("cross-icon");
+  document.getElementById("nav").classList.toggle("change-ham");
+  const hamBurger = document.getElementById("hamburger");
+  const navBar = document.getElementById("navigation");
+  const hpImg = document.querySelector(".hp-mid");
+  const hpFooter = document.querySelector(".hp-btn");
+  const dhFooter = document.querySelector(".dh-footer");
+  const stPage = document.querySelector(".st");
+  const dhPage = document.querySelector(".dh");
 
-  
-  if (hamBurger.classList.contains("cross-icon")) {
+  if (hamBurger.classList.contains("cross-icon")) 
+  {
     // Hamburger is now a cross, hide elements and set transparent background
-    hpImg.style.display = "none";
-    hpFooter.style.display = "none";
-    navBar.style.background = "none";
-    dhFooter.style.display = "none";
-  }
-     else 
-     {
+    if (hpImg) hpImg.style.display = "none";
+    if (hpFooter) hpFooter.style.display = "none";
+    if (navBar) navBar.style.background = "none";
+    if (dhFooter) dhFooter.style.display = "none";
+    if (stPage) stPage.style.background = "transparent"
+    if (dhPage) dhPage.style.background = "transparent"
+  } 
+  else 
+  {
     // Hamburger is back, show elements and set yellow background
-    hpImg.style.display = "flex"; 
-    hpFooter.style.display = "flex";
-    navBar.style.background = "#faea58";
-    dhFooter.style.display = "flex"; 
-    }
+    if (hpImg) hpImg.style.display = "flex";
+    if (hpFooter) hpFooter.style.display = "flex";
+    if (navBar) navBar.style.background = "#faea58";
+    if (dhFooter) dhFooter.style.display = "block";
+    if (stPage) stPage.style.background = "#6cb9e5";
+    if (dhPage) dhPage.style.background = "#6cb9e5";
+  }
+}
+
+function showDlpage(){
+
+  const showPage = document.getElementById("new-div");
+  const dhPage = document.querySelector(".dh");
+  const hidedlIcon = document.querySelector(".ch-div")
+
+  showPage.style.display = "flex"
+ dhPage.style.background = "transparent";
+ hidedlIcon.style.display = "none";
 }
