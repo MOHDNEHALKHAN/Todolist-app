@@ -3,7 +3,7 @@ body.str {
   height: auto;
   margin: 0;
   padding: 0;
-  background-color: #6cb9e5;
+  background: #6cb9e5;
 }
 /* Common code for all pages */
 
@@ -188,7 +188,7 @@ body.hp {
   height: auto;
   margin: 0;
   padding: 0;
-  background-color: #ffffff;
+  background: #ffffff;
 }
 
 .hp-btn {
@@ -251,7 +251,7 @@ body.tp {
   height: auto;
   margin: 0;
   padding: 0;
-  background-color: #ffffff;
+  background: #ffffff;
 }
 
 .ts-add {
@@ -331,7 +331,7 @@ body.tp {
   height: auto;
   margin: 0;
   padding: 0;
-  background-color: #6cb9e5;
+  background: #6cb9e5;
 }
 
 /* Deletehistory-page css */
@@ -341,7 +341,7 @@ body.tp {
   height: auto;
   margin: 0;
   padding: 0;
-  background-color: #6cb9e5;
+  background: #6cb9e5;
 }
 
 .dh-footer {
@@ -357,7 +357,7 @@ body.tp {
 
 #dh-para {
   color: #000;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 19px;
   font-style: normal;
   font-weight: 400;
