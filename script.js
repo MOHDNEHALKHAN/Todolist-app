@@ -17,6 +17,8 @@ function onClickHamburger() {
   const dhFooter = document.querySelector(".dh-footer");
   const stPage = document.querySelector(".st");
   const dhPage = document.querySelector(".dh");
+  const tsPage = document.querySelector(".ts-add");
+  const noresultFound = document.getElementById("new-div");
 
   if (hamBurger.classList.contains("cross-icon")) 
   {
@@ -25,8 +27,10 @@ function onClickHamburger() {
     if (hpFooter) hpFooter.style.display = "none";
     if (navBar) navBar.style.background = "none";
     if (dhFooter) dhFooter.style.display = "none";
-    if (stPage) stPage.style.background = "transparent"
-    if (dhPage) dhPage.style.background = "transparent"
+    if (stPage) stPage.style.background = "transparent";
+    if (dhPage) dhPage.style.background = "transparent";
+    if (tsPage) tsPage.style.display = "none";
+    if (noresultFound) noresultFound.style.display = "none";
   } 
   else 
   {
@@ -37,6 +41,7 @@ function onClickHamburger() {
     if (dhFooter) dhFooter.style.display = "block";
     if (stPage) stPage.style.background = "#6cb9e5";
     if (dhPage) dhPage.style.background = "#6cb9e5";
+    if (tsPage) tsPage.style.display = "flex";
   }
 }
 

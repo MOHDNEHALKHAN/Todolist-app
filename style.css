@@ -48,12 +48,19 @@ body.str {
 .nav li a {
   text-decoration: none;
 }
-.nav li a:active{
-  color:#636363; ;
+.nav li a:active {
+  color: #636363;
 }
 .nav li {
   list-style: none;
-  padding: 16px 0 0 32px;
+  padding: 20px 0 0 32px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#li-all {
+  padding-left: 32px;
 }
 
 .cross-icon .bar {
@@ -78,7 +85,7 @@ body.str {
   position: absolute;
   margin: 0;
   color: #636363;
-  font-family: Berlin Sans FB;
+  font-family: "Marhey", sans-serif;
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
@@ -103,16 +110,16 @@ body.str {
   }
 }
 
-h4{
+h4 {
   color: #514545;
-font-family: Berlin Sans FB;
-font-size: 32px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-position: fixed;
-top: 120px;
-left: 32px;
+  font-family: "Marhey", sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  position: fixed;
+  top: 120px;
+  left: 32px;
 }
 
 /* Startpage css */
@@ -267,7 +274,7 @@ body.tp {
 
 #add-ts {
   color: #fff;
-  font-family: "Roboto", sans-serif;
+  font-family: "Kanit", sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
@@ -277,7 +284,7 @@ body.tp {
 
 #ts-text {
   font-size: 17px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Kanit", sans-serif;
   border-radius: 9px;
   border: 1px solid #737373;
   background: #6cb9e5;
@@ -294,7 +301,7 @@ body.tp {
 
 #add-ds {
   color: #fff;
-  font-family: "Roboto", sans-serif;
+  font-family: "Kanit", sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
@@ -303,7 +310,7 @@ body.tp {
 }
 #ts-des {
   font-size: 17px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Kanit", sans-serif;
   border-radius: 9px;
   border: 1px solid #737373;
   background: #6cb9e5;
@@ -357,7 +364,7 @@ body.tp {
 
 #dh-para {
   color: #000;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 19px;
   font-style: normal;
   font-weight: 400;
