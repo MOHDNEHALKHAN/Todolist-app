@@ -361,10 +361,6 @@ body.tp {
   justify-content: center;
   align-items: center;
 }
-#taskContainer {
-  display: flex;
-  flex-direction: column;
-}
 
 #tp-btn {
   display: flex;
@@ -378,6 +374,36 @@ body.tp {
   margin: 0;
   padding: 0;
   background: #6cb9e5;
+}
+
+#taskContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin-top: 20px;
+}
+
+.task-item{
+  width: auto;
+  height: auto;
+  margin: 0px 30px 10px 30px;
+  border-radius: 9px;
+  border: 1px solid #737373;
+  background: #ffffff;
+  color: #000;
+  font-family: sans-serif;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+#ts-p{
+  margin: 0;
 }
 
 /* Deletehistory-page css */
