@@ -40,8 +40,9 @@ function onClickHamburger() {
     if (navBar) navBar.style.background = "#faea58";
     if (dhFooter) dhFooter.style.display = "block";
     if (stPage) stPage.style.background = "#6cb9e5";
-    if (dhPage) dhPage.style.background = "#6cb9e5";
+    if (dhPage) dhPage.style.background = "#fff";
     if (tsPage) tsPage.style.display = "flex";
+    if (noresultFound) noresultFound.style.display = "flex";
   }
 }
 
