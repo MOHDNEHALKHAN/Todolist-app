@@ -19,6 +19,7 @@ function onClickHamburger() {
   const dhPage = document.querySelector(".dh");
   const tsPage = document.querySelector(".ts-add");
   const noresultFound = document.getElementById("new-div");
+  const taskContainer = document.getElementById("taskContainer");
 
   if (hamBurger.classList.contains("cross-icon")) 
   {
@@ -28,9 +29,11 @@ function onClickHamburger() {
     if (navBar) navBar.style.background = "none";
     if (dhFooter) dhFooter.style.display = "none";
     if (stPage) stPage.style.background = "transparent";
+    if (stPage) stPage.style.overflow = "hidden";
     if (dhPage) dhPage.style.background = "transparent";
     if (tsPage) tsPage.style.display = "none";
     if (noresultFound) noresultFound.style.display = "none";
+    if (taskContainer) taskContainer.style.display = "none";
   } 
   else 
   {
@@ -40,9 +43,11 @@ function onClickHamburger() {
     if (navBar) navBar.style.background = "#faea58";
     if (dhFooter) dhFooter.style.display = "block";
     if (stPage) stPage.style.background = "#6cb9e5";
+    if (stPage) stPage.style.overflow = "auto";
     if (dhPage) dhPage.style.background = "#fff";
     if (tsPage) tsPage.style.display = "flex";
     if (noresultFound) noresultFound.style.display = "flex";
+    if (taskContainer) taskContainer.style.display = "flex";
   }
 }
 
