@@ -32,8 +32,8 @@ function onClickHamburger() {
     if (stPage) stPage.style.overflow = "hidden";
     if (dhPage) dhPage.style.background = "transparent";
     if (tsPage) tsPage.style.display = "none";
-    if (noresultFound) noresultFound.style.display = "none";
     if (taskContainer) taskContainer.style.display = "none";
+    if (noresultFound) noresultFound.style.display = "none"
   } 
   else 
   {
@@ -44,20 +44,29 @@ function onClickHamburger() {
     if (dhFooter) dhFooter.style.display = "block";
     if (stPage) stPage.style.background = "#6cb9e5";
     if (stPage) stPage.style.overflow = "auto";
-    if (dhPage) dhPage.style.background = "#fff";
+    if (dhPage) dhPage.style.background = "#6cb9e5";
     if (tsPage) tsPage.style.display = "flex";
-    if (noresultFound) noresultFound.style.display = "flex";
     if (taskContainer) taskContainer.style.display = "flex";
   }
 }
 
 function showDlpage(){
 
-  const showPage = document.getElementById("new-div");
+  const noresultFound = document.getElementById("new-div");
   const dhPage = document.querySelector(".dh");
   const hidedlIcon = document.querySelector(".ch-div")
+  const hamBurger = document.getElementById("hamburger");
+ 
+ 
 
-  showPage.style.display = "flex"
- dhPage.style.background = "transparent";
- hidedlIcon.style.display = "none";
+ if (hamBurger.classList.contains("cross-icon")) {
+  if (noresultFound) noresultFound.style.display = "none"
+  if (dhPage)dhPage.style.background = "transparent";
+  if (hidedlIcon) hidedlIcon.style.display = "none";
+ }
+ else{
+  if (noresultFound) noresultFound.style.display = "flex"
+  if (dhPage)dhPage.style.background = "#fff";
+  if (hidedlIcon) hidedlIcon.style.display = "none";
+ }
 }
