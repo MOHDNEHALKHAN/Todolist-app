@@ -47,6 +47,7 @@ body.str {
 
 .nav li a {
   text-decoration: none;
+  padding: 8px 0px 0px 0px;
 }
 .nav li a:active {
   color: #636363;
