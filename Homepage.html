@@ -21,6 +21,9 @@
   </head>
   <body class="hp">
     <nav id="navigation">
+     
+        <h3 id="dl-head">Tasks History</h3>
+      
       <div id="hamburger" onclick="onClickHamburger()">
         <div id="bar1" class="bar"></div>
         <div id="bar2" class="bar"></div>
@@ -29,10 +32,23 @@
       <ul class="nav" id="nav">
         <h4>To-do It</h4>
         <li id="li-all">
-          <svg xmlns="http://www.w3.org/2000/svg" width="29" height="35" viewBox="0 0 16 16" fill="none">
-            <path d="M8.70711 1.50005C8.31658 1.10952 7.68342 1.10952 7.29289 1.50005L0.646447 8.14649C0.451184 8.34176 0.451184 8.65834 0.646447 8.8536C0.841709 9.04886 1.15829 9.04886 1.35355 8.8536L2 8.20715V13.5C2 14.3285 2.67157 15 3.5 15H12.5C13.3284 15 14 14.3285 14 13.5V8.20715L14.6464 8.8536C14.8417 9.04886 15.1583 9.04886 15.3536 8.8536C15.5488 8.65834 15.5488 8.34176 15.3536 8.14649L13 5.79294V2.50005C13 2.2239 12.7761 2.00005 12.5 2.00005H11.5C11.2239 2.00005 11 2.2239 11 2.50005V3.79294L8.70711 1.50005ZM13 7.20715V13.5C13 13.7762 12.7761 14 12.5 14H3.5C3.22386 14 3 13.7762 3 13.5V7.20715L8 2.20715L13 7.20715Z" fill="black"/>
-            <path d="M8.70711 1.50005C8.31658 1.10952 7.68342 1.10952 7.29289 1.50005L0.646447 8.14649C0.451184 8.34176 0.451184 8.65834 0.646447 8.8536C0.841709 9.04886 1.15829 9.04886 1.35355 8.8536L2 8.20715V13.5C2 14.3285 2.67157 15 3.5 15H12.5C13.3284 15 14 14.3285 14 13.5V8.20715L14.6464 8.8536C14.8417 9.04886 15.1583 9.04886 15.3536 8.8536C15.5488 8.65834 15.5488 8.34176 15.3536 8.14649L13 5.79294V2.50005C13 2.2239 12.7761 2.00005 12.5 2.00005H11.5C11.2239 2.00005 11 2.2239 11 2.50005V3.79294L8.70711 1.50005ZM13 7.20715V13.5C13 13.7762 12.7761 14 12.5 14H3.5C3.22386 14 3 13.7762 3 13.5V7.20715L8 2.20715L13 7.20715Z" stroke="black" stroke-linecap="round"/>
-          </svg><a href="Homepage.html" id="home-icn">Home Page</a>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="29"
+            height="35"
+            viewBox="0 0 16 16"
+            fill="none"
+          >
+            <path
+              d="M8.70711 1.50005C8.31658 1.10952 7.68342 1.10952 7.29289 1.50005L0.646447 8.14649C0.451184 8.34176 0.451184 8.65834 0.646447 8.8536C0.841709 9.04886 1.15829 9.04886 1.35355 8.8536L2 8.20715V13.5C2 14.3285 2.67157 15 3.5 15H12.5C13.3284 15 14 14.3285 14 13.5V8.20715L14.6464 8.8536C14.8417 9.04886 15.1583 9.04886 15.3536 8.8536C15.5488 8.65834 15.5488 8.34176 15.3536 8.14649L13 5.79294V2.50005C13 2.2239 12.7761 2.00005 12.5 2.00005H11.5C11.2239 2.00005 11 2.2239 11 2.50005V3.79294L8.70711 1.50005ZM13 7.20715V13.5C13 13.7762 12.7761 14 12.5 14H3.5C3.22386 14 3 13.7762 3 13.5V7.20715L8 2.20715L13 7.20715Z"
+              fill="black"
+            />
+            <path
+              d="M8.70711 1.50005C8.31658 1.10952 7.68342 1.10952 7.29289 1.50005L0.646447 8.14649C0.451184 8.34176 0.451184 8.65834 0.646447 8.8536C0.841709 9.04886 1.15829 9.04886 1.35355 8.8536L2 8.20715V13.5C2 14.3285 2.67157 15 3.5 15H12.5C13.3284 15 14 14.3285 14 13.5V8.20715L14.6464 8.8536C14.8417 9.04886 15.1583 9.04886 15.3536 8.8536C15.5488 8.65834 15.5488 8.34176 15.3536 8.14649L13 5.79294V2.50005C13 2.2239 12.7761 2.00005 12.5 2.00005H11.5C11.2239 2.00005 11 2.2239 11 2.50005V3.79294L8.70711 1.50005ZM13 7.20715V13.5C13 13.7762 12.7761 14 12.5 14H3.5C3.22386 14 3 13.7762 3 13.5V7.20715L8 2.20715L13 7.20715Z"
+              stroke="black"
+              stroke-linecap="round"
+            /></svg
+          ><a href="Homepage.html" id="home-icn">Home Page</a>
         </li>
 
         <li>
@@ -52,7 +68,7 @@
               stroke-linejoin="round"
             />
           </svg>
-          <a href="Savetask-page.html">Saved task</a>
+          <a >Saved task</a>
         </li>
 
         <li>
@@ -99,7 +115,7 @@
               stroke-linejoin="round"
             />
           </svg>
-          <a href="DeleteHistory-page.html">Deleted task</a>
+          <a >Deleted task</a>
         </li>
       </ul>
     </nav>
@@ -108,23 +124,71 @@
       <img src="Assests/hp-image.png" alt="Homepage image" class="hp-img" />
     </div>
     <footer class="hp-btn">
-      <a href="Savetask-page.html"
-        ><img src="Assests/saveicon.png" alt="save image" class="save-icon"
+      <a onclick="saveTask()"
+        ><img
+          src="Assests/saveicon.png"
+          alt="save image"
+          class="save-icon"
+          id="svIcon"
       /></a>
 
-      <a href="Taskpage.html">
+      <a onclick="addTask()">
         <img
           src="Assests/taskadd-icon.png"
-          alt="task add button"
+          alt="task-add"
           class="taskadd-icon"
-      /></a>
+        />
+      </a>
+      <a onclick="deleteTask()">
+        <img src="Assests/delete-icon.png" alt="del-icon" class="delete-icon" />
+      </a>
+    </footer>
 
-      <a href="DeleteHistory-page.html">
-        <img
-          src="Assests/delete-icon.png"
-          alt="delete icon"
-          class="delete-icon"
-      /></a>
+    <!-- Task add container for adding multiple tasks -->
+
+    <div id="taskContainer"></div>
+    <div class="ts-add">
+      <label for="text" id="add-ts">Add Task</label>
+      <br />
+      <input type="text" name="" id="ts-text" />
+      <br />
+      <label for="text" id="add-ds">Description</label>
+      <br />
+      <textarea type="text" name="" id="ts-des"></textarea>
+      <div id="tp-btn">
+        <button type="submit" id="submit-btn">
+          Add Task
+        </button>
+      </div>
+    </div>
+
+    <!-- Delete history footer -->
+
+    <footer class="dh-footer">
+      <div class="ch-div">
+        <p id="dh-para">Clear History</p>
+        <a href="#">
+          <svg
+            id="del"
+            xmlns="http://www.w3.org/2000/svg"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-trash-2"
+          >
+            <path d="M3 6h18" />
+            <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6" />
+            <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2" />
+            <line x1="10" x2="10" y1="11" y2="17" />
+            <line x1="14" x2="14" y1="11" y2="17" />
+          </svg>
+        </a>
+      </div>
     </footer>
     <script src="script.js"></script>
   </body>
