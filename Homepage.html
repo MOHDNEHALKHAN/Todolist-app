@@ -23,6 +23,7 @@
     <nav id="navigation">
      
         <h3 id="dl-head">Tasks History</h3>
+        <h3 id="cp-head">Completed Tasks</h3>
       
       <div id="hamburger" onclick="onClickHamburger()">
         <div id="bar1" class="bar"></div>
@@ -68,7 +69,7 @@
               stroke-linejoin="round"
             />
           </svg>
-          <a >Saved task</a>
+          <a onclick="saveTasksl()">Saved task</a>
         </li>
 
         <li>
@@ -115,7 +116,7 @@
               stroke-linejoin="round"
             />
           </svg>
-          <a >Deleted task</a>
+          <a onclick="deleteTasksl()" >Deleted task</a>
         </li>
       </ul>
     </nav>
@@ -123,6 +124,8 @@
       <h3 class="hp-head">Write Your First Task</h3>
       <img src="Assests/hp-image.png" alt="Homepage image" class="hp-img" />
     </div>
+
+  <!-- Homepage footer -->
     <footer class="hp-btn">
       <a onclick="saveTask()"
         ><img
@@ -189,6 +192,10 @@
           </svg>
         </a>
       </div>
+    </footer>
+    <footer id="history-footer">
+      <h3 id="history-head">Exit</h3>
+      <a href="Homepage.html"><img class="exit-img" src="Assests/delete-button.png" alt="exit btn"></a>
     </footer>
     <script src="script.js"></script>
   </body>
