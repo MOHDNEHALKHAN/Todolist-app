@@ -150,7 +150,7 @@
     <!-- Task add container for adding multiple tasks -->
 
     <div id="taskContainer"></div>
-    <div class="ts-add">
+    <div class="ts-add" id="tsadd-hide">
       <label for="text" id="add-ts">Add Task</label>
       <br />
       <input type="text" name="" id="ts-text" />
@@ -159,7 +159,7 @@
       <br />
       <textarea type="text" name="" id="ts-des"></textarea>
       <div id="tp-btn">
-        <button type="submit" id="submit-btn">
+        <button type="submit" id="submit-btn" onclick="createTask()">
           Add Task
         </button>
       </div>
@@ -183,6 +183,7 @@
             stroke-linecap="round"
             stroke-linejoin="round"
             class="lucide lucide-trash-2"
+            color="black"
           >
             <path d="M3 6h18" />
             <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6" />
@@ -196,6 +197,11 @@
     <footer id="history-footer">
       <h3 id="history-head">Exit</h3>
       <a href="Homepage.html"><img class="exit-img" src="Assests/delete-button.png" alt="exit btn"></a>
+    </footer>
+    <footer id="task-icon">
+      <a onclick="tsIcon()">
+        <img src="Assests/taskIcon.png" alt="small task icon" class="ts-icn">
+      </a> 
     </footer>
     <script src="script.js"></script>
   </body>
