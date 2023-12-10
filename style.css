@@ -48,6 +48,7 @@ body.str {
 .nav li a {
   text-decoration: none;
   padding: 8px 0px 0px 0px;
+  color: #636363;
 }
 .nav li a:active {
   color: #636363;
@@ -296,7 +297,15 @@ body.hp {
   width: 100%;
   display: none;
   flex-direction: column;
+  transition: transform 0.3s ease-out; 
 }
+.ts-add.slide-down {
+  transform: translateY(100%); 
+}
+/* .ts-add.slide-up {
+  transform: translateY(0); 
+} */
+
 
 #add-ts {
   color: #fff;
@@ -456,7 +465,7 @@ body.hp {
 
 #history-footer{
   height: 80px;
-  border-radius: 0px;
+  border-radius: 30px 30px 0px 0px;
   background: #faea58;
   position: fixed;
   bottom: 0;
@@ -482,5 +491,22 @@ body.hp {
 padding-right: 5px;
 }
 a{
+  cursor: pointer;
+}
+
+#task-icon{
+  display: none;
+  flex-direction: row-reverse;
+  position: fixed;
+  bottom: 0;
+  height: 80px;
+  width: 100%;
+  z-index: -1;
+}
+
+.ts-icn {
+  height: 50px;
+  width: 50px;
+  margin: 15px 15px 0px 0px;
   cursor: pointer;
 }
