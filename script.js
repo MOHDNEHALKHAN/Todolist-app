@@ -1,7 +1,7 @@
 // button that link index.html file to homepage.html file
 const botBtn = document.querySelector(".bot-btn");
 
-botBtn.addEventListener("click", function () {
+botBtn.addEventListener("click", function() {
   window.location.href = "Homepage.html";
 });
 
@@ -17,6 +17,7 @@ function onClickHamburger() {
   const dhFooter = document.querySelector(".dh-footer");
   const tsAdd = document.querySelector(".ts-add");
   const hpBody = document.querySelector(".hp");
+  const taskIcon = document.getElementById("task-icon");
 
   if (hamBurger.classList.contains("cross-icon")) {
     // Hamburger is now a cross, hide elements and set transparent background
@@ -28,6 +29,10 @@ function onClickHamburger() {
       if (dhFooter) dhFooter.style.display == "none";
       if (hpImg) hpImg.style.display = "none";
       tsAdd.style.display = "none";
+    }
+
+    if (taskIcon && taskIcon.style.display == "flex"){
+      taskIcon.style.display = "none";
     }
 
     if (dhFooter && dhFooter.style.display == "block") {
@@ -46,6 +51,11 @@ function onClickHamburger() {
       if (dhFooter) dhFooter.style.display == "block";
       if (hpImg) hpImg.style.display = "none";
       tsAdd.style.display = "flex";
+    }
+
+    if (taskIcon && taskIcon.style.display == "none"){
+      if (hpFooter) hpFooter.style.display = "none";
+      taskIcon.style.display = "flex";
     }
 
     if (dhFooter && dhFooter.style.display == "none") {
