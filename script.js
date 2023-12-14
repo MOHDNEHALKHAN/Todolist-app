@@ -1,7 +1,7 @@
 // button that link index.html file to homepage.html file
 const botBtn = document.querySelector(".bot-btn");
 
-botBtn.addEventListener("click", function() {
+botBtn.addEventListener("click", function () {
   window.location.href = "Homepage.html";
 });
 
@@ -18,6 +18,7 @@ function onClickHamburger() {
   const tsAdd = document.querySelector(".ts-add");
   const hpBody = document.querySelector(".hp");
   const taskIcon = document.getElementById("task-icon");
+  const navDelete = document.querySelector(".navs");
 
   if (hamBurger.classList.contains("cross-icon")) {
     // Hamburger is now a cross, hide elements and set transparent background
@@ -31,7 +32,7 @@ function onClickHamburger() {
       tsAdd.style.display = "none";
     }
 
-    if (taskIcon && taskIcon.style.display == "flex"){
+    if (taskIcon && taskIcon.style.display == "flex") {
       taskIcon.style.display = "none";
     }
 
@@ -40,6 +41,7 @@ function onClickHamburger() {
       if (tsAdd) tsAdd.style.display == "none";
       dhFooter.style.display = "none";
       hpBody.style.background = "#fff";
+
     }
   } else {
     // Hamburger is back, show elements and set yellow background
@@ -53,7 +55,7 @@ function onClickHamburger() {
       tsAdd.style.display = "flex";
     }
 
-    if (taskIcon && taskIcon.style.display == "none"){
+    if (taskIcon && taskIcon.style.display == "none") {
       if (hpFooter) hpFooter.style.display = "none";
       taskIcon.style.display = "flex";
     }
@@ -63,6 +65,7 @@ function onClickHamburger() {
       if (hpImg) hpImg.style.display = "none";
       dhFooter.style.display = "block";
       hpBody.style.background = "#6cb9e5";
+
     }
   }
 }
@@ -151,47 +154,37 @@ function saveTasksl() {
 }
 
 // feature for hamburger if user click on delete task
+
 function deleteTasksl() {
   const dhFooter = document.querySelector(".dh-footer");
   const hpFooter = document.querySelector(".hp-btn");
   const hpMid = document.querySelector(".hp-mid");
   const hpBody = document.querySelector(".hp");
   const hamBurger = document.getElementById("hamburger");
-  const navDelete = document.getElementById("nav");
-  const navBar = document.getElementById("navigation");
-  const completeHead = document.getElementById("cp-head");
-  const historyFooter = document.getElementById("history-footer");
-  const historyHeading = document.getElementById("history-head");
+  const navDelete = document.querySelector(".navs");
+
+  // Toggle the cross icon to hamburger
+  hamBurger.classList.toggle("cross-icon");
 
   if (hamBurger.classList.contains("cross-icon")) {
-    if (dhFooter) dhFooter.style.display = "block";
+    if (dhFooter) dhFooter.style.display = "none";
     if (hpFooter) hpFooter.style.display = "none";
     if (hpMid) hpMid.style.display = "none";
     if (hpBody) hpBody.style.background = "#6cb9e5";
-    if (navDelete) navDelete.style.display = "none";
-    if (navBar && navBar.style.background == "none") {
-      navBar.style.background = "#faea58";
+    if (navDelete && navDelete.classList.contains("change-ham")) {
+      navDelete.style.display = "flex";
     }
-    if (completeHead) completeHead.style.display = "block";
-    if (navBar) navBar.style.display = "flex";
-    if (navBar) navBar.style.justifyContent = "center";
-    if (navBar) navBar.style.alignItems = "center";
-    if (hamBurger) hamBurger.style.display = "none";
-    if (historyFooter) historyFooter.style.display = "flex";
-    if (historyHeading) historyHeading.style.display = "block";
-  } else {
+  }
+  else {
     if (dhFooter) dhFooter.style.display = "block";
     if (hpFooter) hpFooter.style.display = "none";
-    if (navDelete) navDelete.style.display = "none";
+    if (navBar) navBar.style.background = "#faea58";
     if (hpMid) hpMid.style.display = "none";
     if (hpBody) hpBody.style.background = "#6cb9e5";
-    if (completeHead) completeHead.style.display = "block";
-    if (navBar) navBar.style.display = "flex";
-    if (navBar) navBar.style.justifyContent = "center";
-    if (navBar) navBar.style.alignItems = "center";
-    if (hamBurger) hamBurger.style.display = "none";
-    if (historyFooter) historyFooter.style.display = "flex";
-    if (historyHeading) historyHeading.style.display = "block";
+    if (navDelete && navDelete.classList.contains("change-ham")) {
+      navDelete.classList.remove("change-ham");
+      navDelete.style.display = "transparent";
+    }
   }
 }
 
@@ -200,7 +193,7 @@ function createTask() {
   const hpFooter = document.querySelector(".hp-btn");
   const taskIcon = document.getElementById("task-icon");
 
-  if (tsaddHide) tsaddHide.classList.add('slide-down');
+  if (tsaddHide) tsaddHide.classList.add("slide-down");
   if (hpFooter) hpFooter.style.display = "none";
   if (taskIcon) taskIcon.style.display = "flex";
 }
@@ -209,13 +202,10 @@ function createTask() {
 function tsIcon() {
   const tsaddHide = document.getElementById("tsadd-hide");
 
-  if (tsaddHide.style.display === "none" || tsaddHide.style.display === '') 
-  {
-    tsaddHide.style.display = 'flex';
-    tsaddHide.classList.add('slide-down');
-  } 
-  else 
-  {
-    tsaddHide.classList.remove('slide-down');
+  if (tsaddHide.style.display === "none" || tsaddHide.style.display === "") {
+    tsaddHide.style.display = "flex";
+    tsaddHide.classList.add("slide-down");
+  } else {
+    tsaddHide.classList.remove("slide-down");
   }
 }
