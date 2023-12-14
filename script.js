@@ -162,6 +162,7 @@ function deleteTasksl() {
   const hpBody = document.querySelector(".hp");
   const hamBurger = document.getElementById("hamburger");
   const navDelete = document.querySelector(".navs");
+  const navBar = document.getElementById("navigation");
 
   // Toggle the cross icon to hamburger
   hamBurger.classList.toggle("cross-icon");
