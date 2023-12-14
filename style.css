@@ -38,22 +38,22 @@ body.str {
   transform: translateY(4px);
 }
 
-.nav {
+.navs {
   padding: 0;
   margin: 0px 20px 0px 0px;
   transition: 1s ease;
   display: none;
 }
 
-.nav li a {
+.navs li a {
   text-decoration: none;
   padding: 8px 0px 0px 0px;
   color: #636363;
 }
-.nav li a:active {
+.navs li a:active {
   color: #636363;
 }
-.nav li {
+.navs li {
   list-style: none;
   padding: 20px 0 0 32px;
   display: flex;
@@ -302,9 +302,6 @@ body.hp {
 .ts-add.slide-down {
   transform: translateY(100%); 
 }
-/* .ts-add.slide-up {
-  transform: translateY(0); 
-} */
 
 
 #add-ts {
