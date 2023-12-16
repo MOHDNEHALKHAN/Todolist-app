@@ -124,6 +124,15 @@ h4 {
   left: 32px;
 }
 
+#ham-para{
+  position: absolute;
+  bottom: 0;
+  font-size: 15px;
+  left: 20px;
+  margin: 0;
+  color: #6cb9e5;
+}
+
 #home-icn {
   padding-left: 5px;
 }
