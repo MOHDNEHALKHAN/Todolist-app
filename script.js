@@ -19,6 +19,8 @@ function onClickHamburger() {
   const hpBody = document.querySelector(".hp");
   const taskIcon = document.getElementById("task-icon");
   const historyFooter = document.getElementById("history-footer");
+  const Nores = document.getElementById("noRes");
+  const Del = document.getElementById("del");
 
   if (hamBurger.classList.contains("cross-icon")) {
     // Hamburger is now a cross, hide elements and set transparent background
@@ -41,6 +43,11 @@ function onClickHamburger() {
       if (tsAdd) tsAdd.style.display == "none";
       dhFooter.style.display = "none";
       hpBody.style.background = "#fff";
+    }
+
+    if (Nores && Nores.style.display == "flex"){
+      if (Nores) Nores.style.display = "none";
+      if (hpBody) hpBody.style.background ="none";
     }
 
     if (historyFooter && historyFooter.style.display == "flex"){
@@ -73,6 +80,11 @@ function onClickHamburger() {
       if (hpImg) hpImg.style.display = "none";
       dhFooter.style.display = "block";
       hpBody.style.background = "#6cb9e5";
+    }
+
+    if (Nores && Nores.style.display == "none"){
+      if (Nores) Nores.style.display = "flex";
+      if (hpBody) hpBody.style.background ="#fff";
     }
 
     if (historyFooter && historyFooter.style.display == "none"){
@@ -213,4 +225,14 @@ function tsIcon() {
   } else {
     tsaddHide.classList.remove("slide-down");
   }
+}
+
+// Delete checked marks tasks
+
+function allDelete(){
+  const Nores = document.getElementById("noRes");
+  const hpBody = document.querySelector(".hp");
+
+  Nores.style.display = "flex";
+  hpBody.style.background ="#fff";
 }

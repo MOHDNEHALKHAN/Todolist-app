@@ -516,3 +516,14 @@ a{
   margin: 15px 15px 0px 0px;
   cursor: pointer;
 }
+
+#noRes{
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  top: 200px;
+}
+#res-p{
+  font-family: monospace;
+}
