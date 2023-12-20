@@ -236,3 +236,12 @@ function allDelete(){
   Nores.style.display = "flex";
   hpBody.style.background ="#fff";
 }
+
+//
+/* <div id="toDo">
+<input type="radio" name="checkmark" id="ch-mark">
+<div class="task-info">
+  <p id="ps-head">Homework</p>
+  <p id="ps-des">Do work till 8:00 p.m.</p>
+</div>
+</div> */

@@ -527,3 +527,36 @@ a{
 #res-p{
   font-family: monospace;
 }
+
+#toDo{
+    height: 60px;
+    background: #6CB9E5;
+    border-radius: 9px;
+    box-shadow: 5px 5px 5px grey;
+    display: flex;
+    flex-direction: row;
+    font-family: sans-serif;
+    margin: 0px 10px 0px 10px;
+}
+
+.task-info{
+padding-left: 20px;
+}
+
+#ps-head{
+margin: 10px 0px 0px 0px;
+font-family: 'Unbounded', sans-serif;
+font-size: 16px;
+}
+#ps-des{
+margin: 5px 0px 5px 0px;
+font-family: 'Unbounded', sans-serif;
+font-weight: 100;
+font-size: 14px;
+}
+
+#ch-mark{
+  margin: 0px 0px 0px 15px;
+  accent-color: #faea58;
+  width: 16px;
+}
