@@ -209,10 +209,14 @@ function createTask() {
   let tsaddHide = document.getElementById("tsadd-hide");
   const hpFooter = document.querySelector(".hp-btn");
   const taskIcon = document.getElementById("task-icon");
+  const taskHeading = document.getElementById("ts-text");
+  const taskDescription = document.getElementById("ts-des");
 
   if (tsaddHide) tsaddHide.classList.add("slide-down");
   if (hpFooter) hpFooter.style.display = "none";
   if (taskIcon) taskIcon.style.display = "flex";
+
+
 }
 
 // feature to add tasks & show plus icon
