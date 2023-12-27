@@ -54,6 +54,7 @@ function onClickHamburger() {
       if (hpImg) hpImg.style.display == "none";
       if (hpFooter) hpFooter.style.display == "none";
       if (historyFooter) historyFooter.style.display = "none";
+      hpBody.style.background = "#fff";
     }
 
   } 
@@ -91,6 +92,7 @@ function onClickHamburger() {
       if (hpImg) hpImg.style.display = "none";
       if (hpFooter) hpFooter.style.display = "none";
       if (historyFooter) historyFooter.style.display = "flex";
+      if (hpBody) hpBody.style.background = "#6cb9e5";
     }
   }
 }
@@ -209,14 +211,38 @@ function createTask() {
   let tsaddHide = document.getElementById("tsadd-hide");
   const hpFooter = document.querySelector(".hp-btn");
   const taskIcon = document.getElementById("task-icon");
-  const taskHeading = document.getElementById("ts-text");
-  const taskDescription = document.getElementById("ts-des");
+  let taskHeading = document.getElementById("ts-text").value;
+  let taskDescription = document.getElementById("ts-des").value;
 
   if (tsaddHide) tsaddHide.classList.add("slide-down");
   if (hpFooter) hpFooter.style.display = "none";
   if (taskIcon) taskIcon.style.display = "flex";
 
+  if (taskHeading.trim() !== ''){
+    //create an object and store that values of a task in it
+    var taskDetails = {
+      heading : taskHeading,
+      description : taskDescription
+    };
+  
+// convert the task details object into string
+var taskDetailsJson = JSON.stringify(taskDetails);
 
+// store the converted string into local storage
+
+localStorage.setItem('taskDetails',taskDetailsJson);
+
+//remove the input values to null after successfully saving the task details
+document.getElementById("ts-text").value = '';
+document.getElementById("ts-des").value = '';
+
+//show alert if task is saved successfully
+
+alert("Task saves successfully");
+}
+else{
+  alert("Please add some task")
+}
 }
 
 // feature to add tasks & show plus icon
