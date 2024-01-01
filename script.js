@@ -1,7 +1,7 @@
 // button that link index.html file to homepage.html file
 const botBtn = document.querySelector(".bot-btn");
 
-botBtn.addEventListener("click", function(){
+botBtn.addEventListener("click", function () {
   window.location.href = "Homepage.html";
 });
 
@@ -45,21 +45,20 @@ function onClickHamburger() {
       hpBody.style.background = "#fff";
     }
 
-    if (Nores && Nores.style.display == "flex"){
+    if (Nores && Nores.style.display == "flex") {
       if (Nores) Nores.style.display = "none";
-      if (hpBody) hpBody.style.background ="none";
+      if (hpBody) hpBody.style.background = "none";
     }
 
-    if (historyFooter && historyFooter.style.display == "flex"){
+    if (historyFooter && historyFooter.style.display == "flex") {
       if (hpImg) hpImg.style.display == "none";
       if (hpFooter) hpFooter.style.display == "none";
       if (historyFooter) historyFooter.style.display = "none";
       hpBody.style.background = "#fff";
     }
 
-  } 
-  else 
-  {
+  }
+  else {
     // Hamburger is back, show elements and set yellow background
     if (hpImg) hpImg.style.display = "flex";
     if (hpFooter) hpFooter.style.display = "flex";
@@ -83,12 +82,12 @@ function onClickHamburger() {
       hpBody.style.background = "#6cb9e5";
     }
 
-    if (Nores && Nores.style.display == "none"){
+    if (Nores && Nores.style.display == "none") {
       if (Nores) Nores.style.display = "flex";
-      if (hpBody) hpBody.style.background ="#fff";
+      if (hpBody) hpBody.style.background = "#fff";
     }
 
-    if (historyFooter && historyFooter.style.display == "none"){
+    if (historyFooter && historyFooter.style.display == "none") {
       if (hpImg) hpImg.style.display = "none";
       if (hpFooter) hpFooter.style.display = "none";
       if (historyFooter) historyFooter.style.display = "flex";
@@ -144,8 +143,8 @@ function saveTasksl() {
   const historyHeading = document.getElementById("history-head");
   const navDelete = document.querySelector(".navs");
 
-    // Toggle the cross icon to hamburger
-    hamBurger.classList.toggle("cross-icon");
+  // Toggle the cross icon to hamburger
+  hamBurger.classList.toggle("cross-icon");
 
   if (hamBurger.classList.contains("cross-icon")) {
     if (hpImg) hpImg.style.display = "none";
@@ -218,31 +217,34 @@ function createTask() {
   if (hpFooter) hpFooter.style.display = "none";
   if (taskIcon) taskIcon.style.display = "flex";
 
-  if (taskHeading.trim() !== ''){
-    //create an object and store that values of a task in it
-    var taskDetails = {
-      heading : taskHeading,
-      description : taskDescription
+  if (taskHeading.trim() !== '') {
+    //taking an array to store the multiple tasks
+    const taskContainer = [];
+
+    //created an object and store that values of a task in it
+    const taskInformation = {
+      heading: taskHeading,
+      description: taskDescription
     };
-  
-// convert the task details object into string
-var taskDetailsJson = JSON.stringify(taskDetails);
 
-// store the converted string into local storage
+    // convert the task details object into string
+    const taskInformationJson = JSON.stringify(taskInformation);
 
-localStorage.setItem('taskDetails',taskDetailsJson);
+    // store the converted string into local storage
+    localStorage.setItem('taskInformation', taskInformationJson);
 
-//remove the input values to null after successfully saving the task details
-document.getElementById("ts-text").value = '';
-document.getElementById("ts-des").value = '';
+    //remove the input values to null after successfully saving the task details
+    document.getElementById("ts-text").value = '';
+    document.getElementById("ts-des").value = '';
+ // get the values of taskInformation 
+ localStorage.getItem("taskInformation")
+ // display it in a new div that should be in taskcontainer id
 
-//show alert if task is saved successfully
-
-alert("Task saves successfully");
-}
-else{
-  alert("Please add some task")
-}
+  }
+  else 
+  {
+    alert("Please add some task")
+  }
 }
 
 // feature to add tasks & show plus icon
@@ -259,12 +261,12 @@ function tsIcon() {
 
 // Delete checked marks tasks
 
-function allDelete(){
+function allDelete() {
   const Nores = document.getElementById("noRes");
   const hpBody = document.querySelector(".hp");
 
   Nores.style.display = "flex";
-  hpBody.style.background ="#fff";
+  hpBody.style.background = "#fff";
 }
 
 //
