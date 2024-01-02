@@ -21,6 +21,8 @@ function onClickHamburger() {
   const historyFooter = document.getElementById("history-footer");
   const Nores = document.getElementById("noRes");
   const Del = document.getElementById("del");
+  const taskContainerDiv = document.getElementById("taskContainer");
+
 
   if (hamBurger.classList.contains("cross-icon")) {
     // Hamburger is now a cross, hide elements and set transparent background
@@ -28,28 +30,39 @@ function onClickHamburger() {
     if (hpFooter) hpFooter.style.display = "none";
     if (navBar) navBar.style.background = "none";
 
+     //condition for task page 
     if (tsAdd && tsAdd.style.display == "flex") {
       if (dhFooter) dhFooter.style.display == "none";
       if (hpImg) hpImg.style.display = "none";
       tsAdd.style.display = "none";
     }
 
-    if (taskIcon && taskIcon.style.display == "flex") {
-      taskIcon.style.display = "none";
+   //condition for task page for tsAdd
+    if (taskContainerDiv && taskContainerDiv.style.display == "flex") {
+      taskContainerDiv.style.display = "none";
+      tsAdd.style.display = "none";
     }
 
+    //condition for task page for taskIcon
+    if (taskIcon && taskIcon.style.display == "flex") {
+      taskIcon.style.display = "none";
+      taskContainerDiv.style.display = "none";
+    }
+
+    //condition for deleted task page
     if (dhFooter && dhFooter.style.display == "block") {
       if (hpImg) hpImg.style.display == "none";
       if (tsAdd) tsAdd.style.display == "none";
       dhFooter.style.display = "none";
       hpBody.style.background = "#fff";
     }
-
+    //condition for all deleted task page
     if (Nores && Nores.style.display == "flex") {
       if (Nores) Nores.style.display = "none";
       if (hpBody) hpBody.style.background = "none";
     }
 
+    //condition for history page
     if (historyFooter && historyFooter.style.display == "flex") {
       if (hpImg) hpImg.style.display == "none";
       if (hpFooter) hpFooter.style.display == "none";
@@ -70,9 +83,16 @@ function onClickHamburger() {
       tsAdd.style.display = "flex";
     }
 
+    if (taskContainerDiv && taskContainerDiv.style.display == "flex") {
+      taskContainerDiv.style.display = "flex";
+      tsAdd.style.display = "flex";
+    }
+
     if (taskIcon && taskIcon.style.display == "none") {
       if (hpFooter) hpFooter.style.display = "none";
       taskIcon.style.display = "flex";
+      taskContainerDiv.style.display = "flex";
+      taskIcon.style.zIndex = 0;
     }
 
     if (dhFooter && dhFooter.style.display == "none") {
@@ -212,6 +232,7 @@ function createTask() {
   const taskIcon = document.getElementById("task-icon");
   let taskHeading = document.getElementById("ts-text").value;
   let taskDescription = document.getElementById("ts-des").value;
+  const taskContainerDiv = document.getElementById("taskContainer");
 
   if (tsaddHide) tsaddHide.classList.add("slide-down");
   if (hpFooter) hpFooter.style.display = "none";
@@ -221,11 +242,13 @@ function createTask() {
     //taking an array to store the multiple tasks
     const taskContainer = [];
 
-    //created an object and store that values of a task in it
+    //created an object to store that values of a task in it
     const taskInformation = {
       heading: taskHeading,
       description: taskDescription
     };
+    // storing the values of tasks in an array container 
+    taskContainer.push(taskInformation);
 
     // convert the task details object into string
     const taskInformationJson = JSON.stringify(taskInformation);
@@ -236,26 +259,36 @@ function createTask() {
     //remove the input values to null after successfully saving the task details
     document.getElementById("ts-text").value = '';
     document.getElementById("ts-des").value = '';
- // get the values of taskInformation 
- localStorage.getItem("taskInformation")
- // display it in a new div that should be in taskcontainer id
 
-  }
-  else 
-  {
-    alert("Please add some task")
+    // get the values of taskInformation 
+    localStorage.getItem("taskInformation")
+
+    // display it in a new div that should be in taskcontainer id
+    let taskDiv = document.createElement("div");
+
+    taskDiv.innerHTML = `<div id="toDo">
+   <input type="radio" name="checkmark" id="ch-mark">
+   <div class="task-info">
+   <p id="ps-head">${taskHeading}</p>
+   <p id="ps-des">${taskDescription}</p>
+   </div>
+   </div> `
+    taskContainerDiv.style.display = "flex";
+    taskContainerDiv.appendChild(taskDiv);
   }
 }
 
 // feature to add tasks & show plus icon
 function tsIcon() {
   const tsaddHide = document.getElementById("tsadd-hide");
+  const taskIcon = document.getElementById("task-icon");
 
   if (tsaddHide.style.display === "none" || tsaddHide.style.display === "") {
     tsaddHide.style.display = "flex";
     tsaddHide.classList.add("slide-down");
   } else {
     tsaddHide.classList.remove("slide-down");
+    taskIcon.style.display = "none";
   }
 }
 
@@ -268,12 +301,3 @@ function allDelete() {
   Nores.style.display = "flex";
   hpBody.style.background = "#fff";
 }
-
-//
-/* <div id="toDo">
-<input type="radio" name="checkmark" id="ch-mark">
-<div class="task-info">
-  <p id="ps-head">Homework</p>
-  <p id="ps-des">Do work till 8:00 p.m.</p>
-</div>
-</div> */
