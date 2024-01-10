@@ -239,8 +239,9 @@ function createTask() {
   if (taskIcon) taskIcon.style.display = "flex";
 
   if (taskHeading.trim() !== '') {
-    //taking an array to store the multiple tasks
-    const taskContainer = [];
+
+    // Retrieve existing tasks from local storage
+    let taskContainer = JSON.parse(localStorage.getItem('taskContainer')) || [];
 
     //created an object to store that values of a task in it
     const taskInformation = {
@@ -248,20 +249,14 @@ function createTask() {
       description: taskDescription
     };
     // storing the values of tasks in an array container 
-    taskContainer.push(taskInformation);
-
-    // convert the task details object into string
-    const taskInformationJson = JSON.stringify(taskInformation);
-
-    // store the converted string into local storage
-    localStorage.setItem('taskInformation', taskInformationJson);
+    taskContainer.push(taskInformation); 
+    
+    // Save the updated task array to local storage
+    localStorage.setItem('taskContainer', JSON.stringify(taskContainer));
 
     //remove the input values to null after successfully saving the task details
     document.getElementById("ts-text").value = '';
     document.getElementById("ts-des").value = '';
-
-    // get the values of taskInformation 
-    localStorage.getItem("taskInformation")
 
     // display it in a new div that should be in taskcontainer id
     let taskDiv = document.createElement("div");
