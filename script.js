@@ -30,14 +30,14 @@ function onClickHamburger() {
     if (hpFooter) hpFooter.style.display = "none";
     if (navBar) navBar.style.background = "none";
 
-     //condition for task page 
+    //condition for task page 
     if (tsAdd && tsAdd.style.display == "flex") {
       if (dhFooter) dhFooter.style.display == "none";
       if (hpImg) hpImg.style.display = "none";
       tsAdd.style.display = "none";
     }
 
-   //condition for task page for tsAdd
+    //condition for task page for tsAdd
     if (taskContainerDiv && taskContainerDiv.style.display == "flex") {
       taskContainerDiv.style.display = "none";
       tsAdd.style.display = "none";
@@ -249,8 +249,8 @@ function createTask() {
       description: taskDescription
     };
     // storing the values of tasks in an array container 
-    taskContainer.push(taskInformation); 
-    
+    taskContainer.push(taskInformation);
+
     // Save the updated task array to local storage
     localStorage.setItem('taskContainer', JSON.stringify(taskContainer));
 
@@ -261,13 +261,12 @@ function createTask() {
     // display it in a new div that should be in taskcontainer id
     let taskDiv = document.createElement("div");
 
-    taskDiv.innerHTML = `<div id="toDo">
-   <input type="radio" name="checkmark" id="ch-mark">
+    taskDiv.innerHTML = `<input type="radio" name="checkmark" id="ch-mark">
    <div class="task-info">
    <p id="ps-head">${taskHeading}</p>
    <p id="ps-des">${taskDescription}</p>
-   </div>
-   </div> `
+   </div>`
+    taskDiv.id = "toDo";
     taskContainerDiv.style.display = "flex";
     taskContainerDiv.appendChild(taskDiv);
   }
