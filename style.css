@@ -195,6 +195,7 @@ h4 {
 .str-img {
   height: 217px;
   width: 300px;
+  object-fit: cover;
 }
 
 .bot-btn {
@@ -546,19 +547,35 @@ a {
   margin: 10px 0px 0px 0px;
   font-family: "Unbounded", sans-serif;
   font-size: 16px;
-  color: #eaeaea;
+  color: #000000;
 }
 #ps-des {
-  margin: 5px 0px 5px 0px;
+  margin: 5px 0px 5px 5px;
   font-family: "Unbounded", sans-serif;
   font-weight: 100;
   font-size: 14px;
+  color: #736b6b;
 }
 
 #ch-mark {
   margin: 0px 0px 0px 15px;
   accent-color: #faea58;
   width: 16px;
+}
+
+.editBtn {
+  width: 34px;
+  height: 19px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  color: #000;
+  background: #faea58;
+  font-size: 14px;
+}
+
+.editBtn_div{
+  display: flex;
+  flex-direction: row-reverse;
 }
 
 @media screen and (min-width: 900px) {

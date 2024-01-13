@@ -265,6 +265,9 @@ function createTask() {
    <div class="task-info">
    <p id="ps-head">${taskHeading}</p>
    <p id="ps-des">${taskDescription}</p>
+   </div>
+   <div class= "editBtn_div">
+   <button class ="editBtn" onclick="editTask(${taskContainer.length - 1})">Edit</button>
    </div>`
     taskDiv.id = "toDo";
     taskContainerDiv.style.display = "flex";
