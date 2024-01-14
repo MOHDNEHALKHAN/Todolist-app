@@ -29,6 +29,7 @@
     </div>
     <ul class="navs" id="nav">
       <h4>To-do It</h4>
+      <div class="icon-div">
       <li id="li-all">
         <svg xmlns="http://www.w3.org/2000/svg" width="29" height="35" viewBox="0 0 16 16" fill="none">
           <path
@@ -67,6 +68,7 @@
         </svg>
         <a onclick="deleteTasksl()">Deleted task</a>
       </li>
+    </div>
       <p id="ham-para">Created With ❤️ By Mohd Nehal Khan</p>
     </ul>
   </nav>
@@ -97,7 +99,7 @@
   <!-- Task add container for adding multiple tasks -->
 
   <div class="ts-add" id="tsadd-hide">
-    <label for="text" id="add-ts">Add Task</label>
+    <label for="text" id="add-ts">Task</label>
     <br />
     <input type="text" name="" id="ts-text" />
     <br />
@@ -106,10 +108,27 @@
     <textarea type="text" name="" id="ts-des"></textarea>
     <div id="tp-btn">
       <button type="submit" id="submit-btn" onclick="createTask()">
-        Add Task
+        Save Task
       </button>
     </div>
   </div>
+
+  <!-- Edit task form -->
+<div class="edit-form" id="editForm">
+  <label  id="edit-ts">Edit Task</label>
+  <br />
+  <input type="text" name="" id="edit-text" />
+  <br />
+  <label for="text" id="edit-ds">Edit Description</label>
+  <br />
+  <textarea type="text" name="" id="edit-des"></textarea>
+  <div id="et-btn">
+    <button type="button" id="edit-btn" onclick="saveEditedTask()">
+      Save Changes
+    </button>
+  </div>
+</div>
+
 
   <!-- Delete history footer -->
 
@@ -140,5 +159,4 @@
   </footer>
   <script src="script.js"></script>
 </body>
-
 </html>
