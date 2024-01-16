@@ -34,6 +34,8 @@ function onClickHamburger() {
     if (tsAdd && tsAdd.style.display == "flex") {
       if (dhFooter) dhFooter.style.display == "none";
       if (hpImg) hpImg.style.display = "none";
+      if (hpFooter) hpFooter.style.display == "none";
+      hpFooter.style.display = "none";
       tsAdd.style.display = "none";
     }
 
@@ -80,7 +82,9 @@ function onClickHamburger() {
     if (tsAdd && tsAdd.style.display == "none") {
       if (dhFooter) dhFooter.style.display == "block";
       if (hpImg) hpImg.style.display = "none";
+      if (hpFooter) hpFooter.style.display == "flex";
       tsAdd.style.display = "flex";
+      hpFooter.style.display = "none";
     }
 
     if (taskContainerDiv && taskContainerDiv.style.display == "flex") {
@@ -146,9 +150,11 @@ function deleteTask() {
 function addTask() {
   const tsAdd = document.querySelector(".ts-add");
   const hpImg = document.querySelector(".hp-mid");
-
+  const hpFooter = document.querySelector(".hp-btn");
+ 
   if (tsAdd) tsAdd.style.display = "flex";
   if (hpImg) hpImg.style.display = "none";
+  if (hpFooter) hpFooter.style.display = "none";
 }
 
 // feature for hamburger if user click on save task
@@ -273,6 +279,26 @@ function createTask() {
     taskContainerDiv.style.display = "flex";
     taskContainerDiv.appendChild(taskDiv);
   }
+}
+
+//Edit form functioning (if user wants to change any task information)
+
+function editTask(index) {
+  const taskIcon = document.getElementById("task-icon");
+
+  taskIcon.style.display = "none";
+  // Retrieve existing tasks from local storage
+  let taskContainer = JSON.parse(localStorage.getItem('taskContainer')) || [];
+
+  // Get the task information at the specified index because taskcontainer is an array
+  const taskEdited = taskContainer[index];
+
+  // Showing the current task information
+  document.getElementById("edit-text").value = taskEdited.heading;
+  document.getElementById("edit-des").value = taskEdited.description;
+
+  // Displaying the edit Form to the user
+  document.getElementById("editForm").style.display = "flex";
 }
 
 // feature to add tasks & show plus icon
