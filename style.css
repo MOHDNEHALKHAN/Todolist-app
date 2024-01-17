@@ -123,11 +123,11 @@ h4 {
   top: -26px;
   right: 30px;
 }
-.icon-div{
-display: flex;
-flex-direction: column;
-position: absolute;
-top: 170px;
+.icon-div {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 170px;
 }
 
 #ham-para {
@@ -428,16 +428,16 @@ body.hp {
   margin: 0;
 }
 
-.edit-form{
-    height: 280px;
-    border-radius: 30px 30px 0px 0px;
-    background: #6cb9e5;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    display: none;
-    flex-direction: column;
-    transition: transform 0.3s ease-out
+.edit-form {
+  height: 280px;
+  border-radius: 30px 30px 0px 0px;
+  background: #6cb9e5;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: none;
+  flex-direction: column;
+  transition: transform 0.3s ease-out;
 }
 
 #edit-ts {
@@ -450,19 +450,19 @@ body.hp {
   padding: 20px 0px 0px 30px;
 }
 
-#edit-text{
+#edit-text {
   font-size: 17px;
-    font-family: "Kanit", sans-serif;
-    border-radius: 9px;
-    border: 1px solid #737373;
-    background: #6cb9e5;
-    width: auto;
-    height: 40px;
-    margin: 0px 30px 0px 30px;
-    padding-left: 10px;
+  font-family: "Kanit", sans-serif;
+  border-radius: 9px;
+  border: 1px solid #737373;
+  background: #6cb9e5;
+  width: auto;
+  height: 40px;
+  margin: 0px 30px 0px 30px;
+  padding-left: 10px;
 }
 
-#edit-ds{
+#edit-ds {
   color: #fff;
   font-family: "Kanit", sans-serif;
   font-size: 20px;
@@ -472,7 +472,7 @@ body.hp {
   padding-left: 30px;
 }
 
-#edit-des{
+#edit-des {
   font-size: 17px;
   font-family: "Kanit", sans-serif;
   border-radius: 9px;
@@ -485,29 +485,29 @@ body.hp {
   resize: vertical;
 }
 
-#et-btn{
+#et-btn {
   display: flex;
   flex-direction: row-reverse;
 }
 
-#edit-btn{
-   display: flex;
-    flex-direction: row-reverse;
-    margin: 10px 30px 0px 0px;
-    cursor: pointer;
-    width: 140px;
-    height: 35px;
-    border: none;
-    border-radius: 30px;
-    background: #faea58;
-    color: #3a3a3a;
-    font-family: "Kanit", sans-serif;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    justify-content: center;
-    align-items: center;
+#edit-btn {
+  display: flex;
+  flex-direction: row-reverse;
+  margin: 10px 30px 0px 0px;
+  cursor: pointer;
+  width: 140px;
+  height: 35px;
+  border: none;
+  border-radius: 30px;
+  background: #faea58;
+  color: #3a3a3a;
+  font-family: "Kanit", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  justify-content: center;
+  align-items: center;
 }
 
 .dh-footer {
@@ -622,13 +622,9 @@ a {
   border-radius: 9px;
   box-shadow: 5px 5px 5px grey;
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
   font-family: sans-serif;
   margin: 0px 10px 10px 10px;
-}
-
-.task-info {
-  padding-left: 20px;
 }
 
 #ps-head {
@@ -659,11 +655,15 @@ a {
   color: #000;
   background: #faea58;
   font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.editBtn_div{
+.editBtn_div {
   display: flex;
-  flex-direction: row-reverse;
+  margin-right: 10px;
+  align-items: center;
 }
 
 @media screen and (min-width: 900px) {
