@@ -100,6 +100,16 @@ body.str {
   justify-content: center;
 }
 
+.CRtask{
+  color: #6cb9e5;
+    font-family: "Kanit", sans-serif;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+}
+
 @media only screen and (max-width: 1000px) {
   .change-ham {
     width: 40%;
