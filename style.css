@@ -110,18 +110,6 @@ body.str {
     text-align: center;
 }
 
-@media only screen and (max-width: 1000px) {
-  .change-ham {
-    width: 40%;
-  }
-}
-
-@media only screen and (max-width: 500px) {
-  .change-ham {
-    width: 100%;
-  }
-}
-
 h4 {
   color: #514545;
   font-family: "Marhey", sans-serif;
@@ -303,13 +291,6 @@ body.hp {
 .taskadd-icon {
   height: 50px;
   width: 50px;
-  padding-top: 23px;
-  cursor: pointer;
-}
-
-.delete-icon {
-  height: 50px;
-  width: 45px;
   padding-top: 23px;
   cursor: pointer;
 }
@@ -520,74 +501,9 @@ body.hp {
   align-items: center;
 }
 
-.dh-footer {
-  height: 80px;
-  border-radius: 30px 30px 0px 0px;
-  background: #faea58;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding-bottom: 10px;
-  display: none;
-}
-
-#dh-para {
-  color: #000;
-  font-family: "Poppins", sans-serif;
-  font-size: 19px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-
-.ch-div {
-  display: flex;
-  flex-direction: row-reverse;
-  gap: 3px;
-  margin: 20px 20px 0px 0px;
-  text-align: center;
-  align-items: center;
-}
-
-.dh-div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  top: 150px;
-}
 
 #new-div {
   display: none;
-}
-
-#del:active {
-  color: #636363;
-}
-
-#history-footer {
-  height: 50px;
-  border-radius: 30px 30px 0px 0px;
-  background: #faea58;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding-bottom: 10px;
-  display: none;
-  flex-direction: row-reverse;
-  align-items: center;
-}
-
-#history-head {
-  display: none;
-  font-family: "Kanit", sans-serif;
-  font-size: 26px;
-  font-style: normal;
-  color: #6cb9e5;
-  margin: 10px 30px 0px 0px;
 }
 
 .exit-img {
@@ -676,6 +592,17 @@ a {
   align-items: center;
 }
 
+@media only screen and (max-width: 1000px) {
+  .change-ham {
+    width: 40%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .change-ham {
+    width: 100%;
+  }
+}
 @media screen and (min-width: 900px) {
   .top-des {
     height: 210px;
@@ -697,6 +624,7 @@ a {
     font-size: 40px;
   }
 }
+
 @media screen and (max-width: 899px) and (min-width: 500px) {
   .top-des {
     height: 190px;
