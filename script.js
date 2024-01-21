@@ -14,15 +14,10 @@ function onClickHamburger() {
   const navBar = document.getElementById("navigation");
   const hpImg = document.querySelector(".hp-mid");
   const hpFooter = document.querySelector(".hp-btn");
-  const dhFooter = document.querySelector(".dh-footer");
   const tsAdd = document.querySelector(".ts-add");
   const hpBody = document.querySelector(".hp");
   const taskIcon = document.getElementById("task-icon");
-  const historyFooter = document.getElementById("history-footer");
-  const Nores = document.getElementById("noRes");
-  const Del = document.getElementById("del");
   const taskContainerDiv = document.getElementById("taskContainer");
-
 
   if (hamBurger.classList.contains("cross-icon")) {
     // Hamburger is now a cross, hide elements and set transparent background
@@ -30,9 +25,8 @@ function onClickHamburger() {
     if (hpFooter) hpFooter.style.display = "none";
     if (navBar) navBar.style.background = "none";
 
-    //condition for task page 
+    //condition for task page
     if (tsAdd && tsAdd.style.display == "flex") {
-      if (dhFooter) dhFooter.style.display == "none";
       if (hpImg) hpImg.style.display = "none";
       if (hpFooter) hpFooter.style.display == "none";
       hpFooter.style.display = "none";
@@ -48,33 +42,39 @@ function onClickHamburger() {
     //condition for task page for taskIcon
     if (taskIcon && taskIcon.style.display == "flex") {
       taskIcon.style.display = "none";
-      taskContainerDiv.style.display = "none";
+      if (taskContainerDiv.style.display == "flex" || taskContainerDiv.style.display == "none" ){
+        taskContainerDiv.style.display = "flex";
+      }
     }
-  }
-  else {
+  } 
+  else 
+  {
     // Hamburger is back, show elements and set yellow background
     if (hpImg) hpImg.style.display = "flex";
     if (hpFooter) hpFooter.style.display = "flex";
     if (navBar) navBar.style.background = "#faea58";
 
+    //condition for task page
     if (tsAdd && tsAdd.style.display == "none") {
-      if (dhFooter) dhFooter.style.display == "block";
-      if (hpImg) hpImg.style.display = "none";
       if (hpFooter) hpFooter.style.display == "flex";
+      if (hpImg) hpImg.style.display = "none";
       tsAdd.style.display = "flex";
       hpFooter.style.display = "none";
     }
 
+    //condition for task page for tsAdd
     if (taskContainerDiv && taskContainerDiv.style.display == "flex") {
       taskContainerDiv.style.display = "flex";
       tsAdd.style.display = "flex";
     }
 
+    //condition for task page for taskIcon
     if (taskIcon && taskIcon.style.display == "none") {
       if (hpFooter) hpFooter.style.display = "none";
       taskIcon.style.display = "flex";
-      taskContainerDiv.style.display = "flex";
-      taskIcon.style.zIndex = 0;
+      if(taskContainerDiv && taskContainerDiv.style.display == "flex"){
+        taskContainerDiv.style.display = "flex";
+      }
     }
   }
 }
@@ -99,7 +99,7 @@ function addTask() {
   const tsAdd = document.querySelector(".ts-add");
   const hpImg = document.querySelector(".hp-mid");
   const hpFooter = document.querySelector(".hp-btn");
- 
+
   if (tsAdd) tsAdd.style.display = "flex";
   if (hpImg) hpImg.style.display = "none";
   if (hpFooter) hpFooter.style.display = "none";
@@ -117,25 +117,24 @@ function createTask() {
   if (hpFooter) hpFooter.style.display = "none";
   if (taskIcon) taskIcon.style.display = "flex";
 
-  if (taskHeading.trim() !== '') {
-
+  if (taskHeading.trim() !== "") {
     // Retrieve existing tasks from local storage
-    let taskContainer = JSON.parse(localStorage.getItem('taskContainer')) || [];
+    let taskContainer = JSON.parse(localStorage.getItem("taskContainer")) || [];
 
     //created an object to store that values of a task in it
     const taskInformation = {
       heading: taskHeading,
-      description: taskDescription
+      description: taskDescription,
     };
-    // storing the values of tasks in an array container 
+    // storing the values of tasks in an array container
     taskContainer.push(taskInformation);
 
     // Save the updated task array to local storage
-    localStorage.setItem('taskContainer', JSON.stringify(taskContainer));
+    localStorage.setItem("taskContainer", JSON.stringify(taskContainer));
 
     //remove the input values to null after successfully saving the task details
-    document.getElementById("ts-text").value = '';
-    document.getElementById("ts-des").value = '';
+    document.getElementById("ts-text").value = "";
+    document.getElementById("ts-des").value = "";
 
     // display it in a new div that should be in taskcontainer id
     let taskDiv = document.createElement("div");
@@ -146,8 +145,10 @@ function createTask() {
    <p id="ps-des">${taskDescription}</p>
    </div>
    <div class= "editBtn_div">
-   <button class ="editBtn" onclick="editTask(${taskContainer.length - 1})">Edit</button>
-   </div>`
+   <button class ="editBtn" onclick="editTask(${
+     taskContainer.length - 1
+   })">Edit</button>
+   </div>`;
     taskDiv.id = "toDo";
     taskContainerDiv.style.display = "flex";
     taskContainerDiv.appendChild(taskDiv);
@@ -161,7 +162,7 @@ function editTask(index) {
 
   taskIcon.style.display = "none";
   // Retrieve existing tasks from local storage
-  let taskContainer = JSON.parse(localStorage.getItem('taskContainer')) || [];
+  let taskContainer = JSON.parse(localStorage.getItem("taskContainer")) || [];
 
   // Get the task information at the specified index because taskcontainer is an array
   const taskEdited = taskContainer[index];
