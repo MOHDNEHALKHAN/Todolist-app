@@ -8,7 +8,6 @@ This is a basic To-Do List web application created using HTML, CSS, and JavaScri
 ## Features
 
 - Add new tasks to the list.
-- Check history of list.
 - Delete tasks from the list.
 - Simple and intuitive user interface.
 
