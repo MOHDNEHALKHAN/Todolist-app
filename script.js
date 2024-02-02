@@ -153,65 +153,6 @@ function createTask() {
   }
 }
 
-//Edit form functioning (if user wants to change any task information)
-
-function editTask(index) {
-  const taskIcon = document.getElementById("task-icon");
-
-  taskIcon.style.display = "none";
-  // Retrieve existing tasks from local storage
-  let taskContainer = JSON.parse(localStorage.getItem("taskContainer")) || [];
-
-  // Get the task information at the specified index because taskcontainer is an array
-  const taskEdited = taskContainer[index];
-
-  // Showing the current task information
-  document.getElementById("edit-text").value = taskEdited.heading;
-  document.getElementById("edit-des").value = taskEdited.description;
-
-  // Displaying the edit Form to the user
-  document.getElementById("editForm").style.display = "flex";
-}
-
-// Save the edited task & update the array of taskContainer & show the updated task on task div
-function saveEditedTask(index) {
-  const taskContainerDiv = document.getElementById("taskContainer");
-  const taskIcon = document.getElementById("task-icon");
-
-  // Retrieve existing tasks from local storage
-  let taskContainer = JSON.parse(localStorage.getItem("taskContainer")) || [];
-
-  // Get the edited task information from the edit form
-  let editedHeading = document.getElementById("edit-text").value;
-  let editedDescription = document.getElementById("edit-des").value;
-
-  // Update the task information in the array
-  taskContainer[index].heading = editedHeading;
-  taskContainer[index].description = editedDescription;
-
-  // Save the updated task array to local storage
-  localStorage.setItem("taskContainer", JSON.stringify(taskContainer));
-
-  // Hide the edit form and show the task icon
-  document.getElementById("editForm").style.display = "none";
-  taskIcon.style.display = "flex";
-
-  // Display the updated task on the task div
-  let updatedTaskDiv = document.createElement("div");
-  updatedTaskDiv.innerHTML = `<input type="radio" name="checkmark" id="ch-mark">
-   <div class="task-info">
-   <p id="ps-head">${editedHeading}</p>
-   <p id="ps-des">${editedDescription}</p>
-   </div>
-   <div class= "editBtn_div">
-   <button class ="editBtn" onclick="editTask(${taskContainer.length - 1})">Edit</button>
-   </div>`;
-  updatedTaskDiv.id = "toDo";
-
-  // Replace the old task div with the updated one
-  taskContainerDiv.replaceChild(updatedTaskDiv, taskContainerDiv.childNodes[index]);
-}
-
 // feature to add tasks & show plus icon
 function tsIcon() {
   const tsaddHide = document.getElementById("tsadd-hide");
