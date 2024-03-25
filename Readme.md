@@ -3,8 +3,7 @@
 This is a basic To-Do List web application created using HTML, CSS, and JavaScript. It allows users to add tasks, mark them as completed, and delete them.
 
 ## Todolist Design
-<img src="https://github.com/MOHDNEHALKHAN/Todolist-app/assets/125626654/b13b369a-a391-4ede-bfdc-214f6756b9be"  width="180">
-<img src="https://github.com/MOHDNEHALKHAN/Todolist-app/assets/125626654/486855f2-418e-448e-b862-d6fc1c18761f"  width="180">
+<img src="https://github.com/MOHDNEHALKHAN/Todolist-app/assets/125626654/85fa6124-b80b-484e-9bcb-920a29f5acf9" width="180">
 <img src="https://github.com/MOHDNEHALKHAN/Todolist-app/assets/125626654/7663555e-7805-4e17-a71d-d163b65d55d2"  width="180">
 <img src="https://github.com/MOHDNEHALKHAN/Todolist-app/assets/125626654/ff1ede31-8a70-492b-b613-917492e007dd"  width="180">
 
