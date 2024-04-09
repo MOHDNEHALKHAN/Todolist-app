@@ -364,10 +364,28 @@ body.hp {
   font-size: 17px;
 }
 
+#close-btn {
+  display: flex;
+  margin: 12px 0px 0px 0px; 
+  cursor: pointer;
+  width: 120px;
+  height: 35px;
+  border: none;
+  border-radius: 30px;
+  background: #faea58;
+  color: #3a3a3a;
+  font-family: "Kanit", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  justify-content: center;
+  align-items: center;
+}
 #submit-btn {
   display: flex;
   flex-direction: row-reverse;
-  margin: 10px 30px 0px 0px;
+  margin: 12px 0px 0px 0px; 
   cursor: pointer;
   width: 120px;
   height: 35px;
@@ -386,7 +404,8 @@ body.hp {
 
 #tp-btn {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 #taskContainer {
