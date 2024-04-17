@@ -100,14 +100,14 @@ body.str {
   justify-content: center;
 }
 
-.CRtask{
+.CRtask {
   color: #6cb9e5;
-    font-family: "Kanit", sans-serif;
-    font-size: 26px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    text-align: center;
+  font-family: "Kanit", sans-serif;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
 }
 
 h4 {
@@ -256,7 +256,6 @@ body.hp {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  padding-bottom: 10px;
 }
 
 .hp-head {
@@ -295,19 +294,26 @@ body.hp {
   cursor: pointer;
 }
 
-.ts-add {
-  height: 280px;
-  border-radius: 30px 30px 0px 0px;
-  background: #6cb9e5;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+.task-modal {
   display: none;
-  flex-direction: column;
-  transition: transform 0.3s ease-out;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
 }
-.ts-add.slide-down {
-  transform: translateY(100%);
+
+.ts-add {
+  display: flex;
+  height: 280px;
+  margin: auto;
+  border-radius: 30px 30px 30px 30px;
+  background: #6cb9e5;
+  width: 80%;
+  flex-direction: column;
 }
 
 #add-ts {
@@ -366,13 +372,13 @@ body.hp {
 
 #close-btn {
   display: flex;
-  margin: 12px 0px 0px 0px; 
+  margin: 12px 0px 0px 0px;
   cursor: pointer;
   width: 120px;
   height: 35px;
   border: none;
   border-radius: 30px;
-  background: #faea58;
+  background: #fa5858;
   color: #3a3a3a;
   font-family: "Kanit", sans-serif;
   font-size: 20px;
@@ -385,7 +391,7 @@ body.hp {
 #submit-btn {
   display: flex;
   flex-direction: row-reverse;
-  margin: 12px 0px 0px 0px; 
+  margin: 12px 0px 0px 0px;
   cursor: pointer;
   width: 120px;
   height: 35px;
@@ -406,6 +412,9 @@ body.hp {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  width: 80%;
+  margin: auto;
+  gap: 16px;
 }
 
 #taskContainer {
@@ -519,7 +528,6 @@ body.hp {
   justify-content: center;
   align-items: center;
 }
-
 
 #new-div {
   display: none;

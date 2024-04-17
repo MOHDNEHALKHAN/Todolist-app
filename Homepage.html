@@ -1,108 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Homepage</title>
+    <link rel="shortcut icon" href="/Assests/favicon.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chivo&family=Kanit&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Marhey:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Unbounded:wght@100&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
-  <title>Homepage</title>
-  <link rel="shortcut icon" href="/Assests/favicon.png" type="image/x-icon" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Chivo&family=Kanit&display=swap" rel="stylesheet" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Marhey:wght@500&display=swap" rel="stylesheet" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@100&display=swap" rel="stylesheet">
-</head>
+  <body class="hp">
+    <nav id="navigation">
+      <div id="hamburger" onclick="onClickHamburger()">
+        <div id="bar1" class="bar"></div>
+        <div id="bar2" class="bar"></div>
+        <div id="bar3" class="bar"></div>
+      </div>
+      <ul class="navs" id="nav">
+        <h4>To-do It</h4>
+        <div class="icon-div">
+          <li id="li-all">
+            <img src="Assests/home-icon-silhouette.png" alt="" />
+            <a href="Homepage.html" id="home-icn">Home Page</a>
+          </li>
 
-<body class="hp">
-  <nav id="navigation">
+          <li>
+            <img src="Assests/github-sign.png" alt="" />
+            <a href="https://github.com/MOHDNEHALKHAN">My Github Profile</a>
+          </li>
 
-    <div id="hamburger" onclick="onClickHamburger()">
-      <div id="bar1" class="bar"></div>
-      <div id="bar2" class="bar"></div>
-      <div id="bar3" class="bar"></div>
+          <li>
+            <img src="Assests/linkedin.png" alt="" />
+            <a href="https://www.linkedin.com/in/mohd482/">LinkedIn Profile</a>
+          </li>
+        </div>
+        <p id="ham-para">Created With ❤️ By Mohd Nehal Khan</p>
+      </ul>
+    </nav>
+    <div class="hp-mid">
+      <h3 class="hp-head">Write Your First Task</h3>
+      <img src="Assests/hp-image.png" alt="Homepage image" class="hp-img" />
     </div>
-    <ul class="navs" id="nav">
-      <h4>To-do It</h4>
-      <div class="icon-div">
-      <li id="li-all">
-        <img src="Assests/home-icon-silhouette.png" alt="">
-        <a href="Homepage.html" id="home-icn">Home Page</a>
-      </li>
-
-      <li>
-      <img src="Assests/github-sign.png" alt="">
-        <a href="https://github.com/MOHDNEHALKHAN">My Github Profile</a>
-      </li>
-
-      <li>
-        <img src="Assests/linkedin.png" alt="">
-        <a href="https://www.linkedin.com/in/mohd482/">LinkedIn Profile</a>
-      </li>
+    <div id="noRes">
+      <img src="Assests/noresultfound.png" />
+      <p id="res-p">No Result Found</p>
     </div>
-      <p id="ham-para">Created With ❤️ By Mohd Nehal Khan</p>
-    </ul>
-  </nav>
-  <div class="hp-mid">
-    <h3 class="hp-head">Write Your First Task</h3>
-    <img src="Assests/hp-image.png" alt="Homepage image" class="hp-img" />
-  </div>
-  <div id="noRes">
-    <img src="Assests/noresultfound.png">
-    <p id="res-p">No Result Found</p>
-  </div>
 
-  <!-- Tasks will be added here -->
-  <div id="taskContainer"></div>
+    <!-- Tasks will be added here -->
+    <div id="taskContainer"></div>
 
-  <!-- Task add container for adding multiple tasks -->
-
-  <div class="ts-add" id="tsadd-hide">
-    <label for="text" id="add-ts">Task</label>
-    <br />
-    <input type="text" name="" id="ts-text" />
-    <br />
-    <label for="text" id="add-ds">Description</label>
-    <br />
-    <textarea type="text" name="" id="ts-des"></textarea>
-    <div id="tp-btn">
-      <button type="button" id="close-btn" >
-        Close
-      </button>
-      <button type="submit" id="submit-btn" onclick="createTask()">
-        Save 
-      </button>
+    <!-- Add Task Modal -->
+    <div class="task-modal">
+      <div class="ts-add" id="tsadd-hide">
+        <label for="text" id="add-ts">Task</label>
+        <br />
+        <input type="text" name="" id="ts-text" />
+        <br />
+        <label for="text" id="add-ds">Description</label>
+        <br />
+        <textarea type="text" name="" id="ts-des"></textarea>
+        <div id="tp-btn">
+          <button type="button" id="close-btn" onclick="closeBtn()">Close</button>
+          <button type="submit" id="submit-btn">Save</button>
+        </div>
+      </div>
     </div>
-  </div>
-
-  <!-- Edit task form -->
-<div class="edit-form" id="editForm">
-  <label  id="edit-ts">Edit Task</label>
-  <br />
-  <input type="text" name="" id="edit-text" />
-  <br />
-  <label for="text" id="edit-ds">Edit Description</label>
-  <br />
-  <textarea type="text" name="" id="edit-des"></textarea>
-  <div id="et-btn">
-    <button type="button" id="edit-btn" onclick="saveEditedTask()">
-      Save Changes
-    </button>
-  </div>
-</div>
-
-  <!-- Homepage footer -->
-  <footer class="hp-btn">
-    <p class="CRtask">Create Task</p>
-    <a onclick="addTask()">
-      <img src="Assests/taskadd-icon.png" alt="task-add" class="taskadd-icon" />
-    </a>
-  </footer>
-  <script src="script.js"></script>
-</body>
+    <!-- Homepage footer -->
+    <footer class="hp-btn">
+      <p class="CRtask">Create Task</p>
+      <a onclick="addTask()">
+        <img
+          src="Assests/taskadd-icon.png"
+          alt="task-add"
+          class="taskadd-icon"
+        />
+      </a>
+    </footer>
+    <script src="script.js"></script>
+  </body>
 </html>
