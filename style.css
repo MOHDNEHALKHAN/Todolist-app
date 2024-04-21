@@ -316,16 +316,6 @@ a {
   cursor: pointer;
 }
 
-#task-icon {
-  display: none;
-  flex-direction: row-reverse;
-  position: fixed;
-  bottom: 0;
-  height: 80px;
-  width: 100%;
-  z-index: -1;
-}
-
 #toDo {
   height: 100%;
   background: #6cb9e5;

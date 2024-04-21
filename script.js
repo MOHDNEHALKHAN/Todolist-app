@@ -8,7 +8,6 @@ function onClickHamburger() {
   const hpFooter = document.querySelector(".hp-btn");
   const tsAdd = document.querySelector(".ts-add");
   const hpBody = document.querySelector(".hp");
-  const taskIcon = document.getElementById("task-icon");
   const taskContainerDiv = document.getElementById("taskContainer");
 
   if (hamBurger.classList.contains("cross-icon")) {
@@ -67,16 +66,6 @@ function onClickHamburger() {
   }
 }
 
-// Feature for save icon
-function saveTask() {
-  const hpBody = document.querySelector(".hp");
-  const hpFooter = document.querySelector(".hp-btn");
-  const historyHeading = document.getElementById("history-head");
-
-  if (historyHeading) historyHeading.style.display = "flex";
-  if (hpFooter) hpFooter.style.display = "none";
-  if (hpBody) hpBody.style.background = "#6cb9e5";
-}
 
 // Feature for Add-Task icon
 function addTask() {
@@ -95,4 +84,10 @@ const hpFooter = document.querySelector(".hp-btn");
 
 TaskModal.style.display = "none";
 hpFooter.style.display = "flex";
+};
+
+//Create tasks
+function createTask(){
+let taskHead = document.getElementById(ts-text);
+let taskDes = document.getElementById(ts-des);
 };
