@@ -27,14 +27,6 @@ function onClickHamburger() {
       taskContainerDiv.style.display = "none";
       tsAdd.style.display = "none";
     }
-
-    //condition for task page for taskIcon
-    if (taskIcon && taskIcon.style.display == "flex") {
-      taskIcon.style.display = "none";
-      if (taskContainerDiv.style.display == "flex" || taskContainerDiv.style.display == "none" ){
-        taskContainerDiv.style.display = "flex";
-      }
-    }
   } 
   else 
   {
@@ -53,15 +45,6 @@ function onClickHamburger() {
     if (taskContainerDiv && taskContainerDiv.style.display == "flex") {
       taskContainerDiv.style.display = "flex";
       tsAdd.style.display = "flex";
-    }
-
-    //condition for task page for taskIcon
-    if (taskIcon && taskIcon.style.display == "none") {
-      if (hpFooter) hpFooter.style.display = "none";
-      taskIcon.style.display = "flex";
-      if(taskContainerDiv && taskContainerDiv.style.display == "flex"){
-        taskContainerDiv.style.display = "flex";
-      }
     }
   }
 }
@@ -84,6 +67,9 @@ const hpFooter = document.querySelector(".hp-btn");
 
 TaskModal.style.display = "none";
 hpFooter.style.display = "flex";
+// Clear input fields
+document.getElementById('ts-text').value = '';
+document.getElementById('ts-des').value = '';
 };
 
 //Create tasks
