@@ -72,8 +72,60 @@ document.getElementById('ts-text').value = '';
 document.getElementById('ts-des').value = '';
 };
 
-//Create tasks
-function createTask(){
-let taskHead = document.getElementById(ts-text);
-let taskDes = document.getElementById(ts-des);
-};
+// //Create tasks
+// function createTask(){
+// let taskHead = document.getElementById(ts-text);
+// let taskDes = document.getElementById(ts-des);
+// };
+
+// Function to create a new task element
+function createTaskElement(text, description) {
+  const taskDiv = document.createElement("div");
+  taskDiv.classList.add("task");
+  taskDiv.classList.add("toDo");
+
+  const taskHeader = document.createElement("p");
+  taskHeader.innerText = text;
+  taskHeader.classList.add("task-header");
+
+  const taskDescription = document.createElement("p");
+  taskDescription.innerText = description;
+  taskDescription.classList.add("task-description");
+
+  const editButton = document.createElement("button");
+  editButton.innerText = "Edit";
+  editButton.classList.add("edit-btn");
+  editButton.addEventListener("click", () => editTask(taskDiv));
+
+  const deleteButton = document.createElement("button");
+  deleteButton.innerText = "Delete";
+  deleteButton.classList.add("delete-btn");
+  deleteButton.addEventListener("click", () => removeTask(taskDiv));
+
+  taskDiv.appendChild(taskHeader);
+  taskDiv.appendChild(taskDescription);
+  taskDiv.appendChild(editButton);
+  taskDiv.appendChild(deleteButton);
+
+  return taskDiv;
+}
+
+// Function to create a new task
+function createTask() {
+  const taskText = document.getElementById("ts-text").value;
+  const taskDes = document.getElementById("ts-des").value;
+
+  if (taskText) {
+    const newTask = createTaskElement(taskText, taskDes);
+    const tasksContainer = document.getElementById("taskContainer");
+    tasksContainer.appendChild(newTask);
+
+    // Clear input fields and close modal
+    document.getElementById("ts-text").value = "";
+    document.getElementById("ts-des").value = "";
+    document.getElementById("task-modal").style.display = "none";
+
+    // Update tasks in local storage
+    updateTasksInLocalStorage();
+  }
+}
