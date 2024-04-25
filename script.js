@@ -62,7 +62,7 @@ function addTask() {
 //Close Modal
 function closeBtn(){
 const closeBtn = document.getElementById("close-btn");
-const TaskModal = document.querySelector(".task-modal");
+let TaskModal = document.querySelector(".task-modal");
 const hpFooter = document.querySelector(".hp-btn");
 
 TaskModal.style.display = "none";
@@ -72,16 +72,9 @@ document.getElementById('ts-text').value = '';
 document.getElementById('ts-des').value = '';
 };
 
-// //Create tasks
-// function createTask(){
-// let taskHead = document.getElementById(ts-text);
-// let taskDes = document.getElementById(ts-des);
-// };
-
 // Function to create a new task element
 function createTaskElement(text, description) {
   const taskDiv = document.createElement("div");
-  taskDiv.classList.add("task");
   taskDiv.classList.add("toDo");
 
   const taskHeader = document.createElement("p");
@@ -123,9 +116,9 @@ function createTask() {
     // Clear input fields and close modal
     document.getElementById("ts-text").value = "";
     document.getElementById("ts-des").value = "";
-    document.getElementById("task-modal").style.display = "none";
 
-    // Update tasks in local storage
-    updateTasksInLocalStorage();
+  }
+  else{
+    alert("Write something");
   }
 }
