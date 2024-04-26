@@ -14,19 +14,6 @@ function onClickHamburger() {
     // Hamburger is now a cross, hide elements and set transparent background
     if (hpFooter) hpFooter.style.display = "none";
     if (navBar) navBar.style.background = "none";
-
-    //condition for task page
-    if (tsAdd && tsAdd.style.display == "flex") {
-      if (hpFooter) hpFooter.style.display == "none";
-      hpFooter.style.display = "none";
-      tsAdd.style.display = "none";
-    }
-
-    //condition for task page for tsAdd
-    if (taskContainerDiv && taskContainerDiv.style.display == "flex") {
-      taskContainerDiv.style.display = "none";
-      tsAdd.style.display = "none";
-    }
   } 
   else 
   {
@@ -34,18 +21,6 @@ function onClickHamburger() {
     if (hpFooter) hpFooter.style.display = "flex";
     if (navBar) navBar.style.background = "#faea58";
 
-    //condition for task page
-    if (tsAdd && tsAdd.style.display == "none") {
-      if (hpFooter) hpFooter.style.display == "flex";
-      tsAdd.style.display = "flex";
-      hpFooter.style.display = "none";
-    }
-
-    //condition for task page for tsAdd
-    if (taskContainerDiv && taskContainerDiv.style.display == "flex") {
-      taskContainerDiv.style.display = "flex";
-      tsAdd.style.display = "flex";
-    }
   }
 }
 
