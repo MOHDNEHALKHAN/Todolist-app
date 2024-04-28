@@ -307,12 +307,21 @@ a {
 }
 
 #toDo {
+  display: flex;
   height: 100%;
-  background: #6cb9e5;
+  background: #ffffff;
   border-radius: 9px;
   box-shadow: 5px 5px 5px grey;
-  display: flex;
-  justify-content: space-between;
   font-family: sans-serif;
   margin: 0px 10px 10px 10px;
+}
+.taskInfo{
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+.Btn{
+  display: flex;
+  flex-direction: row;
+  width: 40%;
 }

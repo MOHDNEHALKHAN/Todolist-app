@@ -14,16 +14,12 @@ function onClickHamburger() {
     // Hamburger is now a cross, hide elements and set transparent background
     if (hpFooter) hpFooter.style.display = "none";
     if (navBar) navBar.style.background = "none";
-  } 
-  else 
-  {
+  } else {
     // Hamburger is back, show elements and set yellow background
     if (hpFooter) hpFooter.style.display = "flex";
     if (navBar) navBar.style.background = "#faea58";
-
   }
 }
-
 
 // Feature for Add-Task icon
 function addTask() {
@@ -35,47 +31,16 @@ function addTask() {
 }
 
 //Close Modal
-function closeBtn(){
-const closeBtn = document.getElementById("close-btn");
-let TaskModal = document.querySelector(".task-modal");
-const hpFooter = document.querySelector(".hp-btn");
+function closeBtn() {
+  const closeBtn = document.getElementById("close-btn");
+  let TaskModal = document.querySelector(".task-modal");
+  const hpFooter = document.querySelector(".hp-btn");
 
-TaskModal.style.display = "none";
-hpFooter.style.display = "flex";
-// Clear input fields
-document.getElementById('ts-text').value = '';
-document.getElementById('ts-des').value = '';
-};
-
-// Function to create a new task element
-function createTaskElement(text, description) {
-  const taskDiv = document.createElement("div");
-  taskDiv.classList.add("toDo");
-
-  const taskHeader = document.createElement("p");
-  taskHeader.innerText = text;
-  taskHeader.classList.add("task-header");
-
-  const taskDescription = document.createElement("p");
-  taskDescription.innerText = description;
-  taskDescription.classList.add("task-description");
-
-  const editButton = document.createElement("button");
-  editButton.innerText = "Edit";
-  editButton.classList.add("edit-btn");
-  editButton.addEventListener("click", () => editTask(taskDiv));
-
-  const deleteButton = document.createElement("button");
-  deleteButton.innerText = "Delete";
-  deleteButton.classList.add("delete-btn");
-  deleteButton.addEventListener("click", () => removeTask(taskDiv));
-
-  taskDiv.appendChild(taskHeader);
-  taskDiv.appendChild(taskDescription);
-  taskDiv.appendChild(editButton);
-  taskDiv.appendChild(deleteButton);
-
-  return taskDiv;
+  TaskModal.style.display = "none";
+  hpFooter.style.display = "flex";
+  // Clear input fields
+  document.getElementById("ts-text").value = "";
+  document.getElementById("ts-des").value = "";
 }
 
 // Function to create a new task
@@ -84,16 +49,30 @@ function createTask() {
   const taskDes = document.getElementById("ts-des").value;
 
   if (taskText) {
-    const newTask = createTaskElement(taskText, taskDes);
+    let task = document.createElement("div");
+    task.innerHTML = `
+    <div id = "toDo">
+    <div class = "taskInfo">
+    <p>${taskText}</p>
+    <p>${taskDes}</p>
+    </div>
+    <div class = "Btn">
+    <button onclick = "editTask()" > Edit </button>
+    <button onclick = "deleteTask()" > Delete </button>
+    </div>
+    </div>
+    `;
     const tasksContainer = document.getElementById("taskContainer");
-    tasksContainer.appendChild(newTask);
+    tasksContainer.appendChild(task);
 
     // Clear input fields and close modal
     document.getElementById("ts-text").value = "";
     document.getElementById("ts-des").value = "";
 
-  }
-  else{
-    alert("Write something");
+    return task;
+  } 
+  else 
+  {
+    // alert("Write something");
   }
 }
