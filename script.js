@@ -50,16 +50,15 @@ function createTask() {
 
   if (taskText) {
     let task = document.createElement("div");
+    task.setAttribute("id", "toDo");
     task.innerHTML = `
-    <div id = "toDo">
     <div class = "taskInfo">
     <p>${taskText}</p>
     <p>${taskDes}</p>
     </div>
     <div class = "Btn">
-    <button onclick = "editTask()" > Edit </button>
-    <button onclick = "deleteTask()" > Delete </button>
-    </div>
+    <button onclick = "editTask()" id = "editBtn"> Edit </button>
+    <button onclick = "deleteTask(this.parentNode.parentNode)"  id = "deleteBtn"> Delete </button>
     </div>
     `;
     const tasksContainer = document.getElementById("taskContainer");
@@ -76,3 +75,9 @@ function createTask() {
     // alert("Write something");
   }
 }
+
+//Function to remove a task
+function deleteTask(task){
+  const tasksContainer = document.getElementById("taskContainer");
+  tasksContainer.removeChild(task);
+  }
