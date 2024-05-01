@@ -40,7 +40,7 @@
 
 .navs li a {
   text-decoration: none;
-  padding: 8px 0px 0px 0px;
+  padding: 8px 0px 0px 8px;
   color: #636363;
 }
 .navs li a:active {
@@ -318,10 +318,29 @@ a {
 .taskInfo{
   display: flex;
   flex-direction: column;
-  width: 60%;
+  width: 70%;
 }
 .Btn{
   display: flex;
   flex-direction: row;
-  width: 40%;
+  width: 30%;
+  align-items: center;
+  gap: 2px;
+  margin-right: 10px;
+}
+
+#editBtn{
+  height: 25px;
+  width: 50%;
+  border-radius: 8px;
+  border: none;
+  background-color: #faea58;
+}
+
+#deleteBtn{
+  height: 25px;
+  width: 50%;
+  border-radius: 8px;
+  border: none;
+  background-color: #fa5858;
 }
