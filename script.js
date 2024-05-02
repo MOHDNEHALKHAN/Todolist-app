@@ -53,11 +53,11 @@ function createTask() {
     task.setAttribute("id", "toDo");
     task.innerHTML = `
     <div class = "taskInfo">
-    <p>${taskText}</p>
-    <p>${taskDes}</p>
+    <p class ="headTxt">${taskText}</p>
+    <p class ="desTxt">${taskDes}</p>
     </div>
     <div class = "Btn">
-    <button onclick = "editTask()" id = "editBtn"> Edit </button>
+    <button onclick = "editTask(this.parentNode.parentNode)" id = "editBtn"> Edit </button>
     <button onclick = "deleteTask(this.parentNode.parentNode)"  id = "deleteBtn"> Delete </button>
     </div>
     `;
@@ -67,12 +67,14 @@ function createTask() {
     // Clear input fields and close modal
     document.getElementById("ts-text").value = "";
     document.getElementById("ts-des").value = "";
+     // Close the modal
+     closeBtn();
 
     return task;
   } 
   else 
   {
-    // alert("Write something");
+    alert("Write something");
   }
 }
 
@@ -81,3 +83,35 @@ function deleteTask(task){
   const tasksContainer = document.getElementById("taskContainer");
   tasksContainer.removeChild(task);
   }
+
+// Function to update the task information
+function editTask(task) {
+  // variables used in the div of a task
+  const taskHeading = task.querySelector(".headTxt");
+  const taskDescription = task.querySelector(".desTxt");
+
+  // variables used in para elements in the task modal
+  const taskText = document.getElementById("ts-text");
+  const taskDes = document.getElementById("ts-des");
+
+  // Pre-filling the values of task div in the task modal
+  taskText.value = taskHeading.textContent;
+  taskDes.value = taskDescription.textContent;
+
+  // Opening the modal
+  document.querySelector(".task-modal").style.display = "block";
+
+  // Update button functionality to save edits
+  const submitButton = document.getElementById("submit-btn");
+  submitButton.onclick = function () {
+    const updatedText = taskText.value;
+    const updatedDes = taskDes.value;
+
+    // Update task information in the DOM
+    taskHeading.textContent = updatedText;
+    taskDescription.textContent = updatedDes;
+
+    // Close the modal
+    closeBtn();
+  };
+}
