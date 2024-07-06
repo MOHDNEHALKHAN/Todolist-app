@@ -48,7 +48,7 @@
     <div id="taskContainer"></div>
 
     <!-- Add Task Modal -->
-    <div class="task-modal">
+    <form class="task-modal" id="form">
       <div class="ts-add">
         <label for="text" id="add-ts">Task</label>
         <br />
@@ -58,13 +58,13 @@
         <br />
         <textarea type="text" name="" id="ts-des"></textarea>
         <div id="tp-btn">
-          <button type="button" id="close-btn" onclick="closeBtn()">
+          <button type="button" id="close-btn">
             Close
           </button>
-          <button type="submit" id="submit-btn" onclick="createTask()">Save</button>
+          <button type="submit" id="submit-btn">Save</button>
         </div>
       </div>
-    </div>
+    </form>
     <!-- Homepage footer -->
     <footer class="hp-btn">
       <p class="CRtask">Create Task</p>

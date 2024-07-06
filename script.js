@@ -6,9 +6,6 @@ function onClickHamburger() {
   const hamBurger = document.getElementById("hamburger");
   const navBar = document.getElementById("navigation");
   const hpFooter = document.querySelector(".hp-btn");
-  const tsAdd = document.querySelector(".ts-add");
-  const hpBody = document.querySelector(".hp");
-  const taskContainerDiv = document.getElementById("taskContainer");
 
   if (hamBurger.classList.contains("cross-icon")) {
     // Hamburger is now a cross, hide elements and set transparent background
@@ -32,86 +29,94 @@ function addTask() {
 
 //Close Modal
 function closeBtn() {
-  const closeBtn = document.getElementById("close-btn");
   let TaskModal = document.querySelector(".task-modal");
   const hpFooter = document.querySelector(".hp-btn");
 
   TaskModal.style.display = "none";
   hpFooter.style.display = "flex";
-  // Clear input fields
-  document.getElementById("ts-text").value = "";
-  document.getElementById("ts-des").value = "";
+
 }
 
 // Function to create a new task
-function createTask() {
-  const taskText = document.getElementById("ts-text").value;
-  const taskDes = document.getElementById("ts-des").value;
+let form = document.getElementById("form");
+let taskContainer = document.getElementById("taskContainer");
+let taskHead = document.getElementById("ts-text");
+let taskDes = document.getElementById("ts-des");
 
-  if (taskText) {
-    let task = document.createElement("div");
-    task.setAttribute("id", "toDo");
-    task.innerHTML = `
-    <div class = "taskInfo">
-    <p class ="headTxt">${taskText}</p>
-    <p class ="desTxt">${taskDes}</p>
-    </div>
-    <div class = "Btn">
-    <button onclick = "editTask(this.parentNode.parentNode)" id = "editBtn"> Edit </button>
-    <button onclick = "deleteTask(this.parentNode.parentNode)"  id = "deleteBtn"> Delete </button>
-    </div>
-    `;
-    const tasksContainer = document.getElementById("taskContainer");
-    tasksContainer.appendChild(task);
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+  
+  formValidation();
+});
 
-    // Clear input fields and close modal
-    document.getElementById("ts-text").value = "";
-    document.getElementById("ts-des").value = "";
-     // Close the modal
-     closeBtn();
-
-    return task;
-  } 
-  else 
-  {
-    alert("Write something");
+let formValidation = () => {
+  if (taskHead.value === "" || taskDes.value === "") {
+    alert("Please fill in all the fields");
+  } else {
+    console.log("Task Created");
+    acceptData();
   }
-}
+};
 
-//Function to remove a task
-function deleteTask(task){
-  const tasksContainer = document.getElementById("taskContainer");
-  tasksContainer.removeChild(task);
-  }
+let data = [];
 
-// Function to update the task information
-function editTask(task) {
-  // variables used in the div of a task
-  const taskHeading = task.querySelector(".headTxt");
-  const taskDescription = task.querySelector(".desTxt");
+let acceptData =() =>{
+  data.push({
+    taskHead: taskHead.value,
+    taskDes: taskDes.value,
+  });
 
-  // variables used in para elements in the task modal
-  const taskText = document.getElementById("ts-text");
-  const taskDes = document.getElementById("ts-des");
+  localStorage.setItem("task", JSON.stringify(data));
 
-  // Pre-filling the values of task div in the task modal
-  taskText.value = taskHeading.textContent;
-  taskDes.value = taskDescription.textContent;
+  console.log(data);
+  createTask();
+};
 
-  // Opening the modal
-  document.querySelector(".task-modal").style.display = "block";
+let createTask = () =>{
+  taskDes.innerHTML = "";
+  data.map((x,y) => {
+    return taskContainer.innerHTML += `<div class="task">
+    <p class ="headTxt">${x.taskHead}</p>
+    <p class ="desTxt">${x.taskDes}</p>
+    <div class="Btn">
+    <button class="edit" onclick="editTask(this)" id = "editBtn">Edit</button>
+    <button class="delete" onclick="deleteTask(this)" id = "deleteBtn">Delete</button>
+    </div>
+    </div>`;
+  });
 
-  // Update button functionality to save edits
-  const submitButton = document.getElementById("submit-btn");
-  submitButton.onclick = function () {
-    const updatedText = taskText.value;
-    const updatedDes = taskDes.value;
-
-    // Update task information in the DOM
-    taskHeading.textContent = updatedText;
-    taskDescription.textContent = updatedDes;
-
-    // Close the modal
-    closeBtn();
+  // Clear input fields
+  resetForm();
+  closeBtn();
   };
-}
+
+  let deleteTask = (e) =>{
+    e.parentNode.remove();
+    data.splice(e,1);
+    localStorage.setItem("task", JSON.stringify(data));
+  };
+  
+  let editTask = (e) => {
+    let selectedTask = e.parentNode.parentNode;
+  
+    taskHead.value = selectedTask.children[0].innerText;
+    taskDes.value = selectedTask.children[1].innerText;
+  
+    // Show the task modal for editing
+    const TaskModal = document.querySelector(".task-modal");
+    const hpFooter = document.querySelector(".hp-btn");
+  
+    if (TaskModal) TaskModal.style.display = "block";
+    if (hpFooter) hpFooter.style.display = "none";
+  };
+
+  let resetForm = () =>{
+    taskHead.value = "";
+    taskDes.value = "";
+  };
+
+  (() => {
+    data = JSON.parse(localStorage.getItem("data")) || [];
+console.log(data);
+    createTask();
+  })();

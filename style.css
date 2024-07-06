@@ -306,7 +306,7 @@ a {
   cursor: pointer;
 }
 
-#toDo {
+.task {
   display: flex;
   height: 100%;
   background: #ffffff;
