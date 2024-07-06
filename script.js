@@ -91,7 +91,7 @@ let createTask = () =>{
   };
 
   let deleteTask = (e) =>{
-    e.parentNode.remove();
+    e.parentElement.parentElement.remove();
     data.splice(e,1);
     localStorage.setItem("task", JSON.stringify(data));
   };
